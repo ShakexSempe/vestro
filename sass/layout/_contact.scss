@@ -1,0 +1,204 @@
+@use '../abstracts';
+// CONTACT SECTION
+#contact {
+    background: #000;
+    color: abstracts.$text-second;
+    padding: 10vh 0 5vh;
+    .section-title {
+        padding: 5vh 5vw;
+        color: abstracts.$text-light;
+    }
+    
+    .contact-items {
+            @include abstracts.grid(1, 1rem);
+            gap: 10vh;
+            padding: 5vh 0;
+            margin: 0 5vw;
+    
+            // WIDE SCREENS = 2 GRID COLUMN
+            @include abstracts.lg {
+                    grid-template-columns: 1fr 1fr;
+                    margin: 10vh 5vw 5vh;
+                    column-gap: 2rem;
+                    row-gap: 4rem;
+            }
+    
+        }
+    
+    // GRID ITEM 
+    .contact-item {
+        background-color: #333;
+        border-radius: .5rem;
+        padding: 1rem .5rem;
+        width: 100%;
+        transition: .3s;
+    
+        @include abstracts.lg {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 1rem;
+            z-index: 2;
+        }
+    
+        // ITEM HEADER = ICON + TITLE
+        .contact-item-title {
+            margin: -2rem 0 1.5rem;
+    
+            h3 {
+                color: abstracts.$text-second;
+                font-weight: 500;
+            }
+    
+            i {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #f4f4f4;
+            }
+    
+            .contact-icon {
+                // border: 1px solid red;
+                width: 2.8rem;
+                height: auto;
+                margin-bottom: 1rem;
+                // margin: 0 0 1rem -.5rem;
+            }
+        }
+    
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+    
+            .contact-info-item {
+                margin-bottom: 1rem;
+                padding: .5rem .5rem;
+                
+                outline: 1px solid transparent;
+                background: linear-gradient(0deg, #000, hsl(0, 0%, 2.5%));
+                color: #fff;
+
+                border-radius: abstracts.$border-radius-sm;
+                box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .25);
+                transition: 250ms;
+    
+                // USER ICON AND NAME ROW
+                .flex-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+    
+                    &:nth-child(1) {
+                        margin-bottom: .25rem;
+                    }
+    
+                    .icon {
+                        opacity: .7;
+                    }
+    
+                }
+    
+            }
+    
+            .address {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            p {
+                color: abstracts.$text-light;
+                line-height: 2;
+                transition: 0.25s;
+                font-weight: 400;
+    
+                span {
+                    font-weight: 500;
+                    color: abstracts.$brand-light;
+                    transition: 250ms;
+                }
+    
+                i {
+                    margin-right: .5rem;
+                    color: #fff9;
+                    transition: .25s;
+                }
+            }
+    
+            a {
+                font-family: abstracts.$font-content;
+                color: inherit;
+                text-decoration: underline transparent;
+                text-underline-offset: 4px;
+                transition: 250ms;
+    
+                
+            }
+    
+            .item-button {
+                margin: 1rem 0 .5rem;
+    
+                a {
+                    color: abstracts.$text-main;
+                    text-decoration: none;
+                }
+    
+                &:active {
+                    a {
+                        .icon {
+                            transform: rotate(10deg);
+                        }
+    
+                    }
+                }
+    
+            }
+    
+            // CONTACT INFO HOVER
+            &:hover {
+                p {
+                    span {
+                        opacity: 0.7;
+                    }
+    
+                    i {
+                        transform: translateX(.125rem);
+                    }
+                }
+    
+                .contact-info-item {
+                    .icon {
+                        opacity: 1;
+                    }
+
+                    a {
+                        text-decoration-color: abstracts.$brand-light;
+
+                        &:hover,
+                        &:focus {
+                            color: abstracts.$brand-light;
+                            text-decoration-color: transparent;
+                        }
+                    }
+    
+                    &:hover {
+                        outline-color: #fff6;
+                    }
+    
+                }
+            }
+        }
+    
+        // CONTACT ITEM HOVER 
+        &:hover {
+    
+            .contact-info {
+    
+                .contact-info-item {
+                    outline-color: #fff3;
+                }
+            }
+    
+        }
+    }
+}
+// .CONTACT-ITEMS = GRID CONTAINER[ 1 COLUMN MOBILE & 2 COLUMN ON WIDER SCREENS ]

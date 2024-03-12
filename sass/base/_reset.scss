@@ -1,0 +1,23 @@
+@use '../abstracts';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7vh;
+
+    @include abstracts.md {
+        scroll-padding-top: 8vh;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}

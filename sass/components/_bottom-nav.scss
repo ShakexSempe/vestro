@@ -1,0 +1,161 @@
+@use '../abstracts';
+
+// BOTTOM NAV
+.bottom-nav {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    height: auto;
+    height: 7vh;
+    width: 100%;
+    // border: 2px solid green;
+    padding: 0.25rem 5vw;
+    // background: linear-gradient(0deg, #000, #111);
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    transform: translateY(10vh);
+    transition: .5s;
+    
+    .item {
+        width: 100%;
+        // border: 1px solid yellow;
+
+        transform: translateY(10vh);
+        border-radius: 1.5rem;
+
+        
+        a {
+            width: 100%;
+            // height: 100%;
+
+            display: grid;
+            place-items: center;
+
+            margin-inline: auto;
+            color: #f4f4f4;
+            padding: 1rem 0.5rem;
+            border-radius: 1.5rem;
+            // border: 1px solid red;
+            cursor: default;
+            position: relative;
+            isolation: isolate;
+            transition: .25s;
+            @include abstracts.sm {
+                cursor: pointer;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #333;
+                border-radius: 1.5rem;
+                transform: scaleX(.5);
+                opacity: 0;
+                transition: .25s;
+                z-index: -1;
+            }
+
+            .icon {
+                width: 1.125rem;
+                height: 1.125rem;
+
+                &.outline-icon {
+                    opacity: 0.8;
+                }
+            }
+
+            &:active {
+                transition: .25s;
+                &::after {
+                    // animation: click .25s forwards;
+                    transform: scaleX(1);
+                    transition: .125s;
+                    opacity: .5;
+                }
+            }
+            
+            &:hover {
+                &::after {
+                // animation: click .25s forwards;
+                animation: click .25s;
+                }
+            }
+
+            @keyframes click {
+                0% {
+                    transform: scaleX(.5);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                    transform: scaleX(1);
+                }
+                80% {
+                    opacity: .5;
+                    transform: scaleX(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scaleX(1);
+                }    
+            }
+
+        }
+    }
+    // DESKTOP NAV STYLE
+    @include abstracts.md {
+        display: none;
+        // border-right: 1px solid #0002;
+    }
+    // FOOTER NAV IO
+    &.active-footer {
+        transform: translateY(0);
+        .item {
+            transform: translateY(0);
+            &:nth-child(1){
+                transition: .5s;
+            }
+            &:nth-child(2){
+                transition: .75s;
+            }
+            &:nth-child(3){
+                transition: .95s;
+            }
+        }
+
+
+        @include abstracts.md {
+            transform: translateX(0);
+            .item {
+                transform: translateX(0);
+                &:nth-child(1) {
+                    transition-delay: .25s;
+                }
+                &:nth-child(2) {
+                    transition-delay: .35s;
+                }
+                &:nth-child(3) {
+                    transition-delay: .45s;
+                }
+            }
+        }
+    }
+    &.menu-footer {
+        .item {
+            &.menu-target {
+                i {
+                    color: #fff;
+                    transform: scale(1.05);
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

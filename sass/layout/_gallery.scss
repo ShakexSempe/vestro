@@ -1,0 +1,77 @@
+@use '../abstracts';
+
+.grid-gallery {
+    // border: 2px solid red;
+    padding: 10vh 5vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .5rem;
+    grid-auto-rows: 50vh;
+    grid-auto-flow: dense;
+
+    @include abstracts.sm {
+        grid-auto-rows: 200px;
+    }
+    
+
+    .gallery-figure {
+        // border: 1px solid $brand;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .25rem;
+        overflow: hidden;
+        &.wide {
+            // border: 2px solid purple;
+            @include abstracts.sm {
+                grid-column: span 1;
+                
+            }
+        }
+        &.tall {
+            // border: 2px solid green;
+            @include abstracts.sm {
+                grid-row: span 2;
+            }
+        }
+        &.big {
+            // border: 2px solid pink;
+            @include abstracts.sm {
+                grid-row: span 2;
+                grid-row: span 2;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            display: inline-block;
+            object-fit: cover;
+            border-radius: .25rem;
+        }
+        
+        // IO CLASS
+        &.io-item {
+            opacity: 0;
+            transition: 1s;
+            img {
+                transform:  translateY(5vh);
+                transition: 1s;
+            }
+        }
+        &.active-item {
+            opacity: 1;
+            img {
+                transform: translateY(0);
+            }
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                    transition: .5s ease;
+                }
+            }
+        }
+    }
+}

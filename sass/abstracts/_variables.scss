@@ -1,0 +1,51 @@
+
+$btn-sm : clamp(9rem, 15vw, 10rem);
+$btn-md : clamp(11rem, 15vw, 11rem);
+$btn-lg : clamp(12rem, 15vw, 13rem);
+
+$brand: #f8650c;
+$brand-red: rgb(156,49,49);
+$brand-orange: rgb(211,94,41);
+$brand-dark: hsl(23, 94%, 51%);
+$brand-light: #ffa500;
+$brand-lightest-border: hsla(39, 100%, 50%, .3);
+$brand-light-border: hsla(23, 94%, 51%, .4);
+
+$brand-overlay: linear-gradient(90deg, $brand, hsl(33, 100%, 50%), $brand);
+$brand-overlay-dark: linear-gradient(45deg, $brand, $brand-light);
+$brand-overlay-darker: linear-gradient(-30deg, $brand, $brand-light, $brand);
+$brand-btn: linear-gradient(0deg, $brand-dark, $brand-light);
+$brand-btn-hover: linear-gradient(0deg, $brand-light, $brand-dark);
+$bg-main: #ffffff;
+$bg-main-light: #f4f4f4;
+$bg-second: #000000;
+
+
+$brand-border: linear-gradient(90deg, $brand-dark, hsl(39, 100%, 70%), $brand-dark);
+
+$text-main: #000;
+$text-main-light: #333;
+$text-second: #ffffff;
+$text-second-light: #cccccc;
+$text-light: #fff;
+$text-light-trans: #ffffffb3;
+
+$border-radius-xsm: .25rem;
+$border-radius-sm: .5rem;
+$border-radius-md: 1rem;
+$border-radius-lg: 1.5rem;
+
+$marker: #f4f4f4;
+
+$nav-bg: #161616;
+$nav-links: hsl(0, 0%, 90%);
+$nav-icons: #fff9;
+$active-nav-icon: #f4f4f4;
+
+$box-shadow-sm: inset 2px 2px 2px rgba(255, 255, 255, 0.250),
+                inset -2px -2px 2px rgba(0, 0, 0, 0.250),
+                4px 4px 5px rgba(0, 0, 0, 0.150);
+
+$box-shadow-sm-hover: inset 2px 2px 2px rgba(0, 0, 0, 0.250),
+                    inset -2px -2px 2px rgba(255, 255, 255, 0.152),
+                    1px 2px 2px rgba(0,0,0, .300);

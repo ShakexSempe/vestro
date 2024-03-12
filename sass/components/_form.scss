@@ -1,0 +1,85 @@
+@use '../abstracts';
+
+#form {
+    min-height: 100vh;
+    padding: 10vh 5vw;
+    @include abstracts.md {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .form-container-title {
+        margin-bottom: 5vh;
+        padding: 0;
+        h2 {
+            font-size: abstracts.$font-clamp-xlg;
+        }
+    }
+    
+    
+    label {
+        text-transform: capitalize;
+    }
+
+    input, textarea {
+        display: block;
+        padding: 1rem .5rem;
+        margin: 1rem 0 2rem;
+        width: 100%;
+        border: none;
+        outline: 1px solid abstracts.$brand;
+        outline: 1px solid transparent;
+        background-color: #333;
+        color: #f4f4f4;
+        border-radius: abstracts.$border-radius-xsm;
+        resize: none;
+        transition: .5s;
+        // DESKTOP PADDING
+        @include abstracts.md {
+            padding: 1rem;
+        }
+
+        &:valid {
+            outline-color: #fff6;
+        }
+        
+
+        &::placeholder {
+            opacity: 0;
+            color: #ddd;
+            transform: translateX(.5rem);
+            transition: 500ms;
+            text-transform: capitalize;
+        }
+        
+        // INPUT HOVER EFFECT
+        &:focus {
+            // border-bottom-color: abstracts.$brand-light;
+            outline-color: abstracts.$brand-light;
+
+        }
+
+        &:hover, &:focus {
+            &::placeholder {
+                opacity: 1;
+                transform: translateX(0rem);
+            }
+
+        }
+    }
+    
+
+    // SUBMIT BUTTON
+    button {
+        font-family: inherit;
+        font-weight: 500;
+
+        &:active, &:focus, &:hover  {
+            .icon {
+                transform: rotate(20deg) translateX(.25rem);
+                transition: .25s;
+            }
+        }
+    }
+    
+}

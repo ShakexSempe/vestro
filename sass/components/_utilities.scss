@@ -1,0 +1,176 @@
+@use '../abstracts';
+
+.toggle {
+    // border: 1px solid red;
+    font-size: 20px;
+    height: 1rem;
+    width: 1.25rem;
+    border: none;
+    display: grid;
+    place-items: center;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 5;
+    transition: .5s;
+
+    .bar {
+        background-color: #fff;
+        width: 100%;
+        height: .1em;
+        position: relative;
+        transition: .5s;
+
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transition: .25s;
+        }
+        &::before {
+            transform: translateY(-.25em);
+        }
+        &::after {
+            transform: translateY(.25em);
+        }
+
+    }
+
+    &.active {
+        .bar {
+            &::before {
+                transform: translateY(-.25em) translateX(.25em);
+            }
+            &::after {
+                transform: translateY(.25em) translateX(-.25rem);
+            }
+        }
+    }
+}
+
+// BLOCK DECORATION
+.block-line {
+    position: relative;
+    // border: 3px solid red;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 95%;
+        width: .15rem;
+        background: linear-gradient(0deg, abstracts.$brand, abstracts.$brand-light, abstracts.$brand);
+        transition: 1s ease;
+    }
+    &.io-item {
+        &::before {
+            height: 0;
+        }
+        
+    }
+    &.active-item {
+        &::before {
+            height: 90%;
+        }
+    }
+}
+
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    background: abstracts.$brand;
+    color: #fff;
+    z-index: 99;
+    transition: .25s;
+    transform: translateY(-10vh);
+
+    &:focus {
+        transform: translateY(0);
+        text-decoration: underline;
+    }
+}
+
+
+
+/* LOADER */
+.loader_bg {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+}
+
+.loader-title {
+    font-size: 2rem;
+    color: #fff4;
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    animation: loader-title 1.25s forwards 1s;
+}
+.loader-title .brand-span {
+    animation: brand-span 1.25s forwards 2.25s;
+}
+
+.loader-title::before, .loader-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: .125rem;
+}
+/* UNDERLINE 1 - LIGHT */
+.loader-title::before {
+    background: linear-gradient(90deg, transparent, #f4f4f4, transparent);
+    animation: underline-1 1.25s forwards 1.25s;
+}
+/* UNDERLINE 2 - BRAND */
+.loader-title::after {
+    background: linear-gradient(90deg, transparent, orange, transparent);
+    animation: underline-2 1.25s forwards 2.25s;
+    transform: scaleX(0);
+}
+
+/* UNDERLINE 1 ANIMATION */
+@keyframes underline-1 {
+    100% {
+        transform: scaleX(0);
+    }
+}
+/* UNDERLINE 2 ANIMATION */
+@keyframes underline-2 {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* TITLE SPAN ANIMATION */
+@keyframes brand-span {
+100% {
+color: orange;
+}
+}
+
+/* TITLE P ANIMATION */
+@keyframes loader-title {
+100% {
+gap: .5rem;
+color: #f4f4f4;
+}
+}
+

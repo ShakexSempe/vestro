@@ -1,0 +1,145 @@
+@use '../abstracts';
+
+// HERO 
+#hero {
+    height: 95vh;
+    background: #000;
+    transition: .25s;
+    position: relative;
+    isolation: isolate;
+    
+    display: grid;
+    grid-template-rows: 55% 1fr;
+    // DESKTOP HERO
+    @include abstracts.lg {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    // HERO ACTIVE BACKGROUND CLASS
+    &.active {
+        background: abstracts.$brand;
+    }
+}
+
+// HERO-IMAGE = BACKGROUND IMAGE
+.hero-image {
+    background: #0009;
+    z-index: -1;
+
+    img {
+        object-fit: cover;
+        object-position: 50% 10%;
+        height: 100%;
+        width: 100%;
+        mix-blend-mode: darken;
+
+        @include abstracts.sm {
+            object-position: center;
+            object-position: 50% 30%;
+            margin-left: auto;
+            width: 500px;
+        }
+        @include abstracts.lg {
+            width: 55vw;
+            object-position: 50% 0%;
+        }
+    }
+}
+
+// HERO PAGE TITLE
+.hero-title {
+    position: relative;
+    padding: 1rem 5vw 0;
+    background: #000;
+
+    @include abstracts.sm {
+        padding: 10vh 0 0 5vw;
+    }
+
+    @include abstracts.lg {
+        top: 30vh;
+        padding: 5vh 0 0 5vw;
+    }
+
+    // SLOGAN
+    .slogan {
+        color: abstracts.$text-light;
+        position: relative;
+        text-transform: capitalize;
+
+        h1 {
+            font-weight: 600;
+            font-size: 1.05rem;
+            font-size: clamp(1.05rem, 3vw, 2.25rem);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            text-wrap: balance;
+            br {
+                display: none;
+            }
+            @include abstracts.lg {
+                margin-bottom: 2rem;
+                br {
+                    display: block;
+                }
+            }
+        }
+
+        p {
+            line-height: 1.6;
+            // font-family: abstracts.$font-content;
+        }
+
+        .hero-meta {
+            color: abstracts.$text-second-light;
+            font-weight: 200;
+            display: flex;
+            align-items: center;
+            // line-height: 1.6;
+            i {
+                width: 1.25rem;
+                font-size: .95rem;
+            }
+
+            .icon {
+                position: relative;
+                left: -0.25rem;
+                opacity: .7;
+            }
+        }
+
+        // CTA AND SLOGAN
+        #cta {
+            // QUALITY OR NOTHING P
+            .slogan-p {
+                color: abstracts.$text-light;
+                margin: 0 0 1rem;
+                letter-spacing: .0125rem;
+                span {
+                    color: abstracts.$brand-light;
+                }
+                // @include abstracts.lg {
+                //     margin: .5rem 0 1rem;
+                // }
+            }
+            .cta-btn {
+                font-size: 0.85rem;
+                font-size: abstracts.$font-clamp-sm;
+                width: 12rem;
+                max-height: 4rem;
+                width: clamp(11rem, 15vw, 15rem);
+        }
+        }
+
+        // THANK YOU PAGE HERO
+        &.thanks-message {
+            p {
+                font-weight: 400;
+                color: inherit;
+            }
+        }
+        
+    }
+}

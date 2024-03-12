@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META THEME COLOR -->
+    <meta name="theme-color" content="#000000">
+    <!-- META OG IMAGE -->
+    <meta name="image" property="og:image" content="https://orich-trading-projects.netlify.app/img/orich.jpg">
+    <!-- TITLE -->
+    <title>Civil Engineering & Construction </title>
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="Bloemfontein based Construction company providing construction, electrical & general building services and solutions throughout Gauteng.">
+    <!-- KEYWORDS -->
+    <meta name="keywords" content="general building, construction, Johannesburg, Gauteng, industrial relations, painting, plumbing, tiling, roofing, electrical services & installations, IT network and infrastructure, general building, carpentry, paving, welding, ceiling">
+    
+    <!-- PRELOAD -->
+    <link rel="preload" href="fonts/prompt-regular-webfont.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/app.js" as="script" />
+    <link rel="preload" href="img/work.jpg" as="image" fetchpriority="high">
+    <!-- <link rel="preload" href="img/orich.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="img/hero-mobile-web.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="img/hero_400.jpg" as="image" media="(max-width: 450px)">
+    <link rel="preload" href="img/hero_800.jpg" as="image" media="(min-width: 450.1px)"> -->
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JAVASCRIPT -->
+    <script src="js/app.js" defer></script>
+    
+
+    <!-- META FAVICON -->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="/">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/fav/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    
+
+    <div class="container">
+
+        <!-- HEADER = 1) LOGO 2) SECTION & PAGE NAVIGATION LINKS -->
+        <header id="header" data-header class="index-header hero-header">
+            <!-- SKIP LINK -->
+            <a href="#main" class="skip-link" tabindex="0">skip to main content</a>
+            <!-- LOGO = LINK TO TOP OF THE PAGE -->
+            <div class="logo">
+                    <a href="#">
+                        <!-- <picture>
+                            <source
+                            type="image/webp"
+                            srcset="img/orich-logo.webp"
+                            width="260"
+                            height="255"
+                            >
+                        </picture> -->
+                        <img src="img/vestro-logo.jpg" width="250" height="250" alt="Orich Trading & Projects logo">
+                    </a>
+            </div>
+            <!-- DESKTOP NAVBAR & MOBILE HAMBURGER MENU -->
+            <div class="navigation">
+                <!-- HAMBURGER MENU = HIDDEN ON DESKTOPS -->
+                <div id="toggle" class="toggle">
+                    <div class="bar"></div>
+                </div>
+                <!-- NAVBAR = HIDDEN ON MOBILE SCREENS -->
+                <nav id="nav">
+                    <ul>
+                        <!-- WEBSITE PAGE LINKS -->
+                        <li><a class="nav-link" href="#">home</a></li>
+                        <li><a class="nav-link" href="pages/about.html">about</a></li>
+                        <li><a class="nav-link" href="pages/services.html">services</a></li>
+                        <li><a class="nav-link" href="pages/projects.html">projects</a></li>
+                        
+                        <!-- CONTACT DROPDOWN BUTTON -->
+                        <li title="Contact Dropdown" class="dropdown">
+                            <button class="dropdown-btn">contact
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a title="Contact-info" href="#contact">contact info</a>
+                                <a title="Contact-page" href="pages/contact.html">contact page</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SIDEBAR = HIDDEN ON DESKTOPS -->
+                <!-- SIDEBAR ACTIVATED BY JAVASCRIPT CLICK EVENT LISTENER -->
+                <aside id="aside" class="aside" >
+                    
+                    <!-- WEBSITE PAGE BROWSE -->
+                    <ul>
+
+                        <!-- HOME DROPDOWN -->
+                        <li><a href="#" title="Home-page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-homepage-32-light.png" height="32" width="32" alt="Home page icon" >
+                            home</a>
+                        </li>
+
+                        <!-- ABOUT DROPDOWN -->
+                        <li><a href="pages/about.html" title="About page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-user-48-light.png" height="48" width="48" alt="user icon" >
+                            about</a>
+                        </li>
+
+                        <!-- SERVICES DROPDOWN -->
+                        <li><a href="pages/services.html" title="Services page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-service-48-light.png" height="48" width="48" alt="Tools icon" >
+                            services</a>
+                        </li>
+
+                        <!-- PROJECTS DROPDOWN -->
+                        <li><a href="pages/projects.html" title="Projects page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-four-squares-32-light.png" height="48" width="48" alt="Tasks icon" >
+                            projects</a>
+                        </li>
+                    </ul>
+
+                    <!-- SOCIAL & CONTACT DETAILS -->
+                    <div class="social-links">
+                        
+                        <a target="_blank" style="--i:1;" title="Whatsapp number" href="https://wa.me/27795351811">
+                            <img class="icon" src="icons/aside/icons8-whatsapp-50.png" height="50" width="50" alt="Whatsapp icon">
+                            079 535 1811
+                        </a>
+
+                        <a target="_blank" style="--i:2;" title="Phone number" href="tel:083656678">
+                            <img class="icon" src="icons/brand-icons/icons8-outgoing-call-48-brand.png" height="48" width="48" alt="Outgoing phone-call icon">
+                            083 656 678
+                        </a>
+
+                        <a target="_blank" style="--i:3;" title="Email address" href="mailto:info@vestromixcivils.co.za">
+                            <img class="icon" src="icons/solid/icons8-envelope-48-brand.png" height="48" width="48" alt="envelope icon">
+                            info@vestromixcivils.co.za
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+        </header>
+        
+        <!-- HERO -->
+        <div id="hero">
+
+            <!-- HERO IMAGE -->
+            <picture class="hero-image">
+                <!-- <source
+                media="(min-width: 820.1px)"
+                width="800"
+                height="1035"
+                srcset="img/hero_800.webp"
+                >
+                <source
+                type="image/webp"
+                media="(max-width: 820px)"
+                width="488"
+                height="580"
+                srcset="img/hero-mobile-web.webp"
+                > -->
+
+                <img src="img/work.jpg" width="488" height="580" alt="Construction workers">
+            </picture>
+
+            <!-- WEBSITE SLOGAN -->
+            <div id="title" class="hero-title">
+                <div class="slogan">
+                    <h1>Civil Engineering & Construction</h1>
+
+                    <p class="hero-meta">
+                        <!-- <img class="icon hero-icon" src="icons/contact/icons8-location-pin-50.png" width="50" height="50" alt="location pin"> -->
+                        Bloemfontein, South Africa
+                    </p>
+                    <div id="cta" class="cta">
+                        <p class="slogan-p">Reliable & effective project</p>
+                        <a href="#main" class="cta-btn" title="Main Section">let's work
+                            <img src="icons/solid/icons8-double-right-48-dark.png" class="icon hero-cta-icon" height="48" width="48" alt="double-right">
+                        </a>
+                    </div>
+                </div>
+                <!-- CALL TO ACTION = LINK TO SERVICES MENU -->
+            </div>
+            
+        </div>
+        
+        <!-- MAIN -->
+        <main class="main index-main" id="main" >
+
+            <!-- SECTION : ABOUT -->
+            <section class="about">
+
+                <!-- SECTION TITLE -->
+                <div class="section-title io-item">
+                    <h2>About</h2>
+                </div>
+
+            </section>
+
+            <!-- SECTION : SERVICES -->
+            <section id="services" class="services">
+
+                <!-- SECTION TITLE -->
+                <div class="section-title io-item">
+                    <h2>services</h2>
+                </div>
+                
+            </section>
+
+            <!-- SECTION : SERVICES -->
+            <section id="projects" class="projects">
+
+                <!-- SECTION TITLE -->
+                <div class="section-title io-item">
+                    <h2>projects</h2>
+                </div>
+                
+            </section>
+            
+            
+            
+            <!-- FOOTER -->
+            <div class="footer" id="footer">
+                <!-- FOOTER LOGO -->
+                <div class="footer-logo">
+                    <!-- <picture>
+                        <source
+                        type="image/webp"
+                        srcset="img/orich-logo.webp"
+                        width="250"
+                        height="250"
+                        >
+                    </picture> -->
+                    <img src="img/vestro-logo.jpg" loading="lazy" width="250" height="250" alt="Orich Trading & Projects Logo">
+                </div>
+
+                <!-- FOOTER COPYRIGHT INFO -->
+                <div class="footer-item footer-copyright">
+                    <div class="footer-item-title">
+                        <h3>all rights reserved</h3>
+                    </div>
+                    <p>copyright &copy; Vestromix Civil & Construction (Pty) Ltd</p>
+                    <p>Bloemfontein, Gauteng</p>
+                    <p>web design: <a href="https://shakexsempe.netlify.app/" target="_blank">shakex sempe</a></p>
+                    <p><span id="date"></span></p>
+                </div>
+
+                <!-- FOOTER BROWSE -->
+                <div class="footer-item">
+
+                    <div class="footer-item-title">
+                        <h3>browse website</h3>
+                    </div>
+
+                    <ul class="footer-list page-links">
+
+                        <li>
+                            <img class="icon" src="icons/contact/icons8-home-page-48.png" alt="home page icon" height="48" width="48">
+                            <a href="#">home</a>
+                        </li>
+
+                        <li>
+                            <img class="icon" src="icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
+                            <a href="pages/about.html">about</a>
+                        </li>
+
+                        <li>
+                            <img class="icon" src="icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
+                            <a href="pages/services.html">services</a>
+                        </li>
+
+                        <li>
+                            <img class="icon" src="icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
+                            <a href="pages/projects.html">projects</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- FOOTER CONTACT ITEMS -->
+                <div class="footer-item contact-items">
+
+                    <div class="footer-item-title">
+                        <h3>contact details</h3>
+                    </div>
+
+                    <ul class="footer-list contact-links">
+
+                        <!-- EMAIL -->
+                        <li>
+                            <img src="icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
+                            <a href="mailto:info@vestromixcivils.co.za">info@vestromixcivils.co.za</a>
+                        </li>
+
+                        <!-- PHONE NUMBER -->
+                        <li>
+                            <img src="icons/solid/icons8-outgoing-call-48-dark.png" height="48" width="48" alt="outgoing call icon" class="icon">
+                            <a target="_blank" style="--i:2;" href="tel:079 535 1811">079 535 1811</a>
+                        </li>
+
+                        <!-- PHONE NUMBER -->
+                        <li>
+                            <img src="icons/solid/icons8-outgoing-call-48-dark.png" height="48" width="48" alt="outgoing call icon" class="icon">
+                            <a target="_blank" style="--i:2;" href="tel:083 656 678">083 656 678</a>
+                        </li>
+
+                        <!-- FACEBOOK -->
+                        <li>
+                            <img src="icons/solid/icons8-facebook-48-dark.png" height="48" width="48" alt="Facebook icon" class="icon">
+                            <a target="_blank" href="">Facebook</a>
+                        </li>
+
+                        <li>
+                            <img src="icons/solid/icons8-info-squared-48-dark.png" height="48" width="48" alt="Info square icon" class="icon">
+                            <a href="pages/contact.html">Contact Page</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            
+        </main>
+
+        <!-- FOOTER-NAVIGATION -->
+        <div class="bottom-nav">
+            
+            <!-- NAV-ITEM 1 -->
+            <div class="item item1 menu-target">
+                
+                <div class="active-icon">
+                    <a class="contact-item mobile-contact-item" title="Contact" href="#contact">
+                        
+                        <img class="icon outline-icon" src="icons/outline/icons8-envelope-48-light.png" width="48" height="48" alt="envelope icon">
+                        <img class="icon solid-icon" src="icons/solid/icons8-envelope-48-light.png" width="48" height="48" alt="envelope icon">
+
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- NAV-ITEM 2 -->
+            <div class="item item2">
+
+                <div class="active-icon">
+
+                    <a href="#" title="Home">
+                        <img class="icon outline-icon" src="icons/outline/icons8-homepage-32-light.png" width="32" height="32" alt="Home-page icon">
+                        <img class="icon solid-icon" src="icons/solid/icons8-homepage-48-light.png" width="32" height="32" alt="Home-page icon">
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- NAV-ITEM 3 -->
+            <div class="item item3 menu-target">
+
+                <div class="active-icon">
+
+                    <a class="contact-item" title="Footer" href="#footer">
+                        <img class="icon outline-icon" src="icons/outline/icons8-four-squares-32-light.png" width="32" height="32" alt="four-squares icon">
+                        <img class="icon solid-icon" src="icons/solid/icons8-four-squares-48-light.png" width="32" height="32" alt="four-squares icon">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script>
+        const date = document.getElementById("date");
+        date.innerHTML = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>

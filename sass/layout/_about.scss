@@ -1,0 +1,509 @@
+@use '../abstracts';
+
+    // ABOUT SECTION
+    .about {
+        position: relative;
+        @include abstracts.lg {
+            // padding: 10vh 0;
+        }
+        // DESKTOP GRID LAYOUT
+        // 2 COLUMNS = ARTICLE + MISSION STATEMENT CARD
+        @include abstracts.xlg {
+            .flex-container {
+                @include abstracts.grid(2, 10vw);
+                
+            }
+        }
+
+        // DARK-THEME 
+        @include abstracts.dark {
+            background-color: #000;
+            color: #f4f4f4;
+        }
+
+
+        // ABOUT SECTION MISSION STATEMENT CONTAINER
+        .vision-mission {
+            padding: 5vh 5vw;
+            margin: 5vh 0;
+
+            @include abstracts.sm {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            @include abstracts.xlg {
+                padding: 0;
+            }
+
+            // MISSION STATEMENT CARD
+            // CARD = TITLE[H3] + CONTENT[IMG + P]
+            .mission {
+                max-width: 500px;
+
+                // CARD TITLE
+                h3 {
+                    font-size: 1.5rem;
+                    font-size: abstracts.$font-clamp-lg;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    text-transform: capitalize;
+                    transition: .25s;
+                    text-align: center;
+                    // background: #000;
+                    // color: #fff;
+                }
+
+                // CONTENT = BLACK BORDER BOX WITH IMG + CENTERED P TEXT
+                // OVERFLOW HIDDEN FOR IMG IO TRANSITION 
+                .statement {
+                    border: 2px solid #000;
+                    border-radius: .25rem;
+                    width: 100%;
+                    height: 50vh;
+                    height: 20rem;
+                    overflow: hidden;
+                    transition: 1s;
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .mission-logo {
+                        overflow: hidden;
+                        flex-basis: 90%;
+                        background: #fff;
+
+                        figure {
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                                transition: 1s;
+                            }
+
+                            &.io-item {
+                                img {
+                                    transform: translate(0) scale(.8);
+                                }
+                            }
+
+                            &.active-item {
+                                img {
+                                    transform: translate(0) scale(1);
+                                    transition: 1s;
+                                }
+                            }
+                        }
+                    }
+
+                    .mission-content {
+                        flex-basis: 50%;
+                        background: #000;
+                        text-align: center;
+                        display: grid;
+                        place-items: center;
+                        place-content: center;
+                        padding: .5rem;
+
+                        @include abstracts.dark {
+                            background: #222;
+                        }
+
+                        @include abstracts.md {
+                            padding: 1rem;
+                            flex-basis: 20%;
+                        }
+
+                        p {
+                            color: abstracts.$text-second;
+                            font-family: abstracts.$font-content;
+                        }
+
+                        // VIEW SERVICES LINK
+                        a {
+                            text-transform: capitalize;
+                            color: abstracts.$brand-light;
+                            text-decoration: underline;
+                            
+
+                            i {
+                                font-size: .85rem;
+                                transition: .25s;
+                            }
+
+                            &:hover {
+                                i {
+                                    transform: translateX(-.25rem);
+                                    color: abstracts.$brand;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            @media (min-width: 820px) {
+
+                // margin-top: 10vh;
+                .vision {
+                    padding: 5vh .5rem;
+                    margin: 0 5vw;
+                    width: 70%;
+
+                    h3 {
+                        font-size: 2.5rem;
+                    }
+
+                    ul {
+
+                        li {
+                            padding-bottom: 1rem;
+
+                            &::marker {
+                                color: abstracts.$marker;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+    // ABOUT ARTICLE
+    .about-article {
+        margin: 5vh 1rem 10vh 5vw;
+        text-transform: none;
+        font-family: abstracts.$font-content;
+
+        // border: 2px solid red;
+        @include abstracts.sm {
+            margin: 5vh 5vw;
+        }
+        @include abstracts.xlg {
+            width: 100%;
+        }
+        // ABOUT ARTICLE BODY CONTENT
+        // = ONLY ON ABOUT PAGE. INDEX ABOUT SECTION = INTRO ONLY
+        // = TITLE[H3] + P
+        .article-body {
+            margin-bottom: 5vh;
+
+            .body-title {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                font-family: abstracts.$font-brand;
+                // border: 1px solid red;
+
+                a {
+                    .icon {
+                        height: auto;
+                        opacity: .25;
+                    }
+                    &:hover , &:focus {
+                        .icon {
+                            opacity: 1;
+                            transform: translateX(-0.5rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        // FIRST LETTER OF THIS P ARTICLE HAS MAGAZINE STYLE FIRST LETTER
+        p {
+            &.article-intro {
+                text-wrap: balance;
+                &::first-letter {
+                    font-size: 2rem;
+                    padding: 0 .2rem 0 .05rem;
+                    background: #000;
+                    color: #fff;
+                    float: left;
+                    margin-right: 0.1rem;
+                    border-radius: .25rem;
+                    box-shadow: 2px 3px 3px hsla(211, 16%, 34%, 0.150);
+                    text-shadow: 2px 2px 0px #f8650c;
+
+                }
+            }
+        }
+
+        // CORE SERVICES ARTICLE LIST WITH GREY GRADIENT BG
+        ul {
+            margin: .5rem 0;
+            padding: .5rem;
+            position: relative;
+            border-radius: .25rem;
+            background: linear-gradient(90deg, #ddd, #fff);
+            
+            li {
+                position: relative;
+                list-style: none;
+                margin-bottom: .25rem;
+                
+                font-family: abstracts.$font-brand;
+                font-size: 1rem;
+                font-size: abstracts.$font-clamp-sm;
+                font-weight: 500;
+                text-transform: capitalize;
+
+                a {
+                    width: 70%;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.5rem;
+
+                    .icon {
+                        opacity: 0;
+                    }
+
+                    &:hover, &:focus {
+                        .icon {
+                            opacity: 1;
+                            transform: translateX(-0.5rem);
+                        }
+                    }
+                }
+            }
+
+            @include abstracts.dark {
+                background: #333;
+            }
+        }
+
+    }
+
+
+    // ABOUT PAGE
+    #about-page {
+            .article-container {
+                // border: 2px solid red;
+
+                .page-article {
+                    position: relative;
+                    isolation: isolate;
+                    @include abstracts.md {
+                        width: auto;
+                    }
+                    ul {
+                        margin-bottom: 1rem;
+                        @include abstracts.md {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                    p {
+                        // MARGIN BOTTOM TO SEPARATE INTRO AND BODY
+                        // DESKTOP ARTICLE = HALF SCREEN WIDTH FOR READABILITY 
+                        &.article-intro {
+                            margin-bottom: 1rem;
+                            @include abstracts.md {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    // ARTICLE PAD = IMAGES BETWEEN ARTICLE BODY ELEMENTS 
+                    .article-pad {
+                        background-color: #fff;
+                        width: auto;
+                        margin: 5vh auto;
+                        
+                        figure {
+                            width: 100%;
+                            height: 70vh;
+                            overflow: hidden;
+                            
+                            img {
+                                object-fit: cover;
+                                height: 100%;
+                                border-radius: abstracts.$border-radius-sm;
+                            }
+                        }
+
+                        // DESKTOP IMAGE STYLES
+                        // IMAGES FLOAT OON LEFT AND RIGHT OF ARTICLE BODY TEXT
+                        @include abstracts.md {
+                            width: 20rem;
+                            float: left;
+                            overflow: hidden;
+                            margin: 0 .5rem 0 0;
+
+                            figure {
+                                margin: 0;
+                                width: 100%;
+                                height: auto;
+
+                                img {
+                                    border-radius: abstracts.$border-radius-xsm;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+
+                            &.reverse {
+                                float: right;
+                                margin-right: 0;
+                                margin-left: .25rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+            
+            // BOTTOM SECTION OF ABOUT PAGE
+            // COMPANY VISION AND EXTENDED MISSION STATEMENT
+            .vision-mission {
+                padding: 1rem 0;
+                // .VISION CARD = TITLE[H3] + UL 
+
+                @include abstracts.md {
+                    padding: 0;
+                }
+
+                .vision {
+                    max-width: 500px;
+                    width: 90vw;
+                    margin: 0 auto;
+                    background: #000;
+                    color: abstracts.$text-second;
+                    padding: 1rem;
+                    border-radius: .25rem;
+                    overflow: hidden;
+                    // TITLE
+                    h3 {
+                        font-size: 2.5rem;
+                        color: abstracts.$brand;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                        position: relative;
+                        width: fit-content;
+                    }
+
+                    // CARD BODY = LI ITEMS
+                    ul {
+                        // LI ITEMS SEPARATED BY BOTTOM PADDING + BORDER
+                        li {
+                            font-family: abstracts.$font-content;
+                            margin-bottom: 1rem;
+                            padding: .25rem 0rem .5rem .25rem;
+                            font-weight: 400;
+                            list-style: none;
+                            border-bottom: 2px solid abstracts.$brand-lightest-border;
+                            transition: .25s;
+                            &::marker {
+                                color: #fff6;
+                            }
+
+                            @include abstracts.lg {
+                                padding-bottom: .5rem;
+                            }
+
+                            // LI ITEM HOVER STATE
+                            // BG LIGHTENS AND BORDER-BOTTOM = TRANSPARENT
+                            &:hover {
+                                background: #161616;
+                                border-color: transparent;
+                                border-radius: abstracts.$border-radius-xsm;
+                            }
+                        }
+                    }
+                }
+                // EXTENDED MISSION STATEMENT
+                // .MISSION = TITLE + 
+                .mission {
+                    background: #000;
+                    padding: 10vh 5vw;
+                    margin: 10vh 0 0;
+
+                    // DESKTOP .MISSION
+                    @include abstracts.md {
+                        padding: 15vh 5vw;
+                    }
+
+                    h4 {
+                        color: #000;
+                        color: #fff;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                        text-transform: capitalize;
+                        transition: 250ms;
+                    }
+
+                    p {
+                        color: abstracts.$text-second-light;
+                        font-family: abstracts.$font-content;
+                        margin-bottom: .5rem;
+                        transition: 250ms;
+                    }
+
+                    .term {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5vh;
+
+                        .objective {
+                            padding: 0.5rem;
+                        }
+
+                        // DESKTOP .STATEMENT
+                        @include abstracts.md {
+                            gap: 2rem;
+                            flex-direction: row;
+
+                            .objective {
+                                flex-basis: 50%;
+                                padding: 1rem;
+                            }
+                        }
+                    }
+                    // MS CLASS FOR HOVER STATES
+                    .ms-item {
+                        border-radius: .25rem;
+                        border: 1px solid abstracts.$brand;
+                        background: #111;
+                        transition: .25s;
+                        margin-bottom: 5vh;
+
+                        // CARD HOVER STATE
+                        // CHANGE BG AND BORDER COLOR + H4 COLOR
+                        &:hover {
+                            background: #000;
+                            transition: .5s;
+                            border: 1px solid transparent;
+                            h4 {
+                                color: abstracts.$brand;
+                                transition: .5s;
+                            }
+                            p {
+                                transition: 250ms;
+                                color: abstracts.$text-light;
+                            }
+                        }
+                    }
+                    // MS CLASS FOR HOVER STATE
+
+                    .statement {
+                        padding: .5rem;
+                        width: 100%;
+                        margin-bottom: 2rem;
+
+                        // DESKTOP .STATEMENT
+                        @include abstracts.md {
+                            padding: 1rem;
+                        }
+                    }
+
+                }
+
+            }
+    }

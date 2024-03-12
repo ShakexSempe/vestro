@@ -1,0 +1,234 @@
+@use '../abstracts';
+
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+}
+
+
+main {
+    position: relative;
+    background: #fff;
+    color: abstracts.$text-main;
+
+    @include abstracts.dark {
+        background: #000;
+    }
+
+    // ACTIVE HEADER OVERLAY TO MAIN SECTION
+    &::after {
+        position: fixed;
+        content: '';
+        top: 5vh;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-image: linear-gradient(40deg, abstracts.$brand-light, #000);
+        opacity: 0;
+        z-index: -1;
+        transition: .2s;
+    }
+
+    &.active {
+        &::after {
+            z-index: 1;
+
+            opacity: .7;
+        }
+    }
+
+    // CONTACT PAGE THEME COLOR
+    &.contact-page-main {
+        background: #000;
+        form {
+        color: abstracts.$text-second;
+
+        }
+    }
+}
+
+section {
+    min-height: 95vh;
+    border: 2px solid abstracts.$brand-red;
+    outline: 1px solid abstracts.$brand-orange;
+    outline-offset: -5px;
+    padding: 5vh 5vw;
+
+    @include abstracts.md {
+        padding: 10vh 10vw;
+    }
+}
+
+.section-title {
+    text-transform: capitalize;
+    padding: 5vh 0;
+    overflow: hidden;
+    width: max-content;
+
+    h2 {
+        position: relative;
+        font-size: 1.5rem;
+        font-size: abstracts.$font-clamp-xlg;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        // TITLE UNDERLINE
+        &::after, &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: .2rem;
+            background-color: #000;
+            transition: 500ms;
+        }
+
+        &::before {
+            width: calc(100% - 1rem);
+            height: 0.1rem;
+            bottom: -0.25rem;
+            // background-color: abstracts.$brand-orange;
+            
+        }
+        // &::after {
+        //     background-color: abstracts.$brand-red;
+        // }
+
+    }
+
+    // SECTION-TITLE IO
+    &.io-item {
+        h2 {
+            transition: 1s;
+
+            &::before {
+                transform: translateX(5vw);
+                transition: 1.5s;
+            }
+            &::after {
+                transform: translateX(-5vw);
+                transition: 1.5s;
+            }
+        }
+    }
+
+    &.active-item {
+        h2 {
+            letter-spacing: normal;
+
+            &::before {
+                background-color: abstracts.$brand-orange;
+                transform: translateX(0);
+            }
+
+            &::after {
+                transform: translateX(0);
+                background-color: abstracts.$brand-red;
+            }
+
+        }
+    }
+
+}
+
+.container-title {
+    padding: .5rem 1rem;
+    border-top-right-radius: abstracts.$border-radius-sm;
+    border-top-left-radius: abstracts.$border-radius-sm;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: abstracts.$border-radius-sm;
+        border-top-left-radius: abstracts.$border-radius-sm;
+        background: linear-gradient(0deg, #000, hsl(0, 0%, 5%), #000);
+        z-index: -1;
+        transition: 1s;
+    }
+
+    h2,
+    h3 {
+        color: abstracts.$text-light;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 2rem;
+        font-size: abstracts.$font-clamp-lg;
+        transition: 1500ms ease;
+    }
+
+    // CONTAINER-TITLE IO
+    &.io-item {
+        &::after {
+            transition: 1.5s;
+        }
+
+        :nth-child(1) {
+            letter-spacing: .05rem;
+        }
+    }
+
+    &.active-item {
+        &::after {
+            transition: 1.5s;
+        }
+
+        :nth-child(1) {
+            letter-spacing: normal;
+        }
+    }
+
+}
+
+h3 {
+    margin-bottom: .5rem;
+
+    text-wrap: balance;
+    text-transform: capitalize;
+    
+    font-size: 1.025rem;
+    font-size: abstracts.$font-clamp-md;
+    font-weight: 500;
+}
+
+p {
+    color: abstracts.$text-main-light;
+
+    font-family: abstracts.$font-content;
+    font-size: abstracts.$font-clamp-sm;
+    font-weight: 300;
+
+    line-height: 1.8;
+    text-wrap: pretty;
+
+    @include abstracts.dark {
+        color: #ddd;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: .25s;
+    &:hover:not(.cta-btn, .skip-link), &:focus:not(.cta-btn, .skip-link) {
+        color: abstracts.$brand-light;
+    }
+}
+
+.icon {
+    width: 1rem;
+    width: clamp(1rem, 3vw, 1.0125rem);
+    height: 1rem;
+    height: clamp(1rem, 3vh, 1.0125rem);
+    transition: 0.25s;
+}

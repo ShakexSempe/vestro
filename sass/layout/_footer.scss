@@ -1,0 +1,128 @@
+@use '../abstracts';
+
+.footer {
+    // border: 2px solid abstracts.$brand;
+    padding: 5vh 5vw 11vh;
+    background: linear-gradient(0deg, #fafafa, #ffff);
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    // DARK-THEME 
+    @include abstracts.dark {
+        background: #333;
+        color: #f4f4f4;
+    }
+
+    @include abstracts.xlg {
+        padding: 30vh 5vw 10vh;
+        background: linear-gradient(90deg, #ffff, #fafafa);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+    a {
+        text-decoration: none;
+        color: abstracts.$text-main;
+        transition: .25s;
+        &:hover, &:focus {
+            color: abstracts.$brand;
+        }
+
+        @include abstracts.dark {
+            color: #ddd;
+        }
+    }
+    
+
+    .footer-logo {
+        // border: 1px solid blue;
+        img {
+            width: 10rem;
+            width: clamp(10rem, 15vw, 12rem);
+            height: 100%;
+        }
+    }
+
+    .footer-copyright {
+        text-transform: capitalize;
+        p {
+            font-family: abstracts.$font-content;
+            // font-size: abstracts.$font-clamp-xsm;
+            @include abstracts.lg {
+                margin-bottom: .25rem;
+            }
+        }
+        a {
+            // color: abstracts.$brand;
+            font-weight: 500;
+        }
+    }
+
+    .footer-item {
+        .footer-item-title {
+            text-transform: capitalize;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-list {
+            list-style: none;
+            // PAGE LINKS LI
+            &.page-links {
+                text-transform: capitalize;
+            }
+            
+            li {
+                font-family: abstracts.$font-content;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-bottom: 0.5rem;
+                @include abstracts.lg {
+                    margin-bottom: 1rem;
+                }
+                i {
+                    width: 1rem;
+                    margin-right: .5rem;
+                    transition: .25s;
+                }
+                a {
+                    transition: .25s;
+                }
+
+                &:hover {
+
+                    a {
+                        color: abstracts.$brand;
+                    }
+
+                    i {
+                        transform: translateX(.25rem);
+                        color: abstracts.$brand;
+                    }
+
+                    .icon {
+                        transform: translateX(.25rem);
+                        opacity: .9;
+                    }
+
+                }
+
+                
+            }
+            
+        }
+    }
+
+    .page-links {
+        // border: 2px solid red;
+
+        li {
+            
+            i {
+                margin-right: .5rem;
+            }
+        }
+    }
+    
+}

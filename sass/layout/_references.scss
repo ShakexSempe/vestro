@@ -1,0 +1,116 @@
+@use '../abstracts';
+
+// CERTIFICATES
+#references {
+    background: linear-gradient(90deg, hsl(0, 0%, 20%), hsl(0, 0%, 25%), hsl(0, 0%, 20%));
+    background: abstracts.$brand-overlay-darker;
+    padding: 10vh 5vw;
+    @include abstracts.lg {
+        padding: 20vh 5vw;
+    }
+    
+    // GRID CONTAINER - 3 COLUMNS ON WIDE SCREENS & 1 COLUMN ON SMALLER SCREENS
+    .references {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem 0;
+        margin-top: 5vh;
+        width: 100%;
+        // WIDE SCREEN 3 COLUMNS
+        @include abstracts.lg {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+        @include abstracts.xlg {
+            gap: 2rem;
+        }
+
+        // GRID ITEMS
+        // GRID ITEM = WATERMARK + TITLE + CONTENT + LINK 
+        .reference {
+            background-color: #fff;
+            border-radius: abstracts.$border-radius-sm;
+            width: 100%;
+            height: 100%;
+            padding: 1rem 0 1rem 1rem;
+            position: relative;
+            isolation: isolate;
+            box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .125);
+            text-wrap: balance;
+            transition: 250ms;
+
+            // DESKTOP CARD STYLE
+            // BIGGER PADDING AND FLEX P[ICON + P]
+            @include abstracts.md {
+                padding: 1rem;
+                
+            }
+            // CARD WATERMARK ICON - ICON DARKENS ON HOVER
+            .item-icon {
+                position: absolute;
+                top: 50%;
+                right: 0rem;
+                transform: translateY(-50%);
+                
+                width: 8rem;
+                width: clamp(8rem, 15vw, 10rem);
+                height: auto;
+                
+                opacity: 0.05;
+                transition: 250ms;
+                z-index: -1;
+            }
+            
+            // CARD TITLE[H3]
+            h3 {
+                text-transform: capitalize;
+                font-size: 1.025rem;
+                font-size: clamp(1rem, 2vw, 1.125rem);
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 0.75rem;
+            }
+
+            p {
+                color: abstracts.$text-main-light;
+                font-family: abstracts.$font-content;
+            }
+
+            // CARD-ITEM = P
+            .card-item {
+                text-transform: capitalize;
+                font-size: abstracts.$font-clamp-sm;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+            }
+
+
+            // EXTERNAL LINK 
+            a {
+                display: block;
+                width: max-content;
+                color: #595959;
+                margin-top: 0.75rem;
+                &:hover, &:focus {
+                    color: abstracts.$brand-light;
+                }
+            }
+
+            // CARD HOVER STATE
+            // WATERMARK OPACITY INCREASE
+            &:hover {
+                transform: scale(1.0125);
+                .item-icon {
+                    opacity: 0.1;
+                }
+            }
+        }
+
+    }
+
+}

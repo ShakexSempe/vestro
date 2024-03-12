@@ -1,0 +1,458 @@
+@use '../abstracts';
+
+// SERVICES SECTION
+.services {
+    background: #f4f4f4;
+    // padding: 10vh 5vw;
+
+    @include abstracts.dark {
+        background: #000;
+        color: #f4f4f4;
+        P {
+            color: #ddd;
+        }
+    }
+}
+
+// INTRO P BEFORE SERVICE ITEMS
+.section-description {
+    margin-bottom: 2rem;
+    text-wrap: balance;
+    @include abstracts.md {
+        margin: 2rem 0 4rem;
+    }
+    
+    p {
+        text-wrap: balance;
+        font-family: abstracts.$font-content;
+    }
+}
+
+// SERVICE ITEMS CONTAINER
+.service-container {
+
+    .grid-container {
+        display: grid;
+        margin: 10vh auto;
+        gap: 10vh;
+
+        // WIDER SCREENS GRID
+        @include abstracts.md {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 10vh auto 10vh;
+            column-gap: 2rem;
+            row-gap: 4rem;
+        }
+
+        @include abstracts.xlg {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+
+}
+
+// SERVICE ITEM = FLEX CONTAINER WITH TITLE + CONTENT[UL] 
+.service-item {
+    background: #fafafa;
+    width: 100%;
+    padding: 0.25rem 1rem 1rem;
+
+    border-radius: abstracts.$border-radius-sm;
+    border: 1px solid #0001;
+    position: relative;
+    isolation: isolate;
+    transition: 250ms;
+    
+
+    // DESKTOP ITEM STYLE
+    @include abstracts.md {
+        padding: 0rem 1rem 4rem;
+    }
+
+    // PSEUDO SHADOW
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: abstracts.$border-radius-sm;
+        z-index: -1;
+        transition: 0;
+    }
+
+    &::before {
+        background: #fafafa;
+        box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, .05);
+    }
+
+    &::after {
+        // background-image: radial-gradient(#f4f4f4, #fff);
+        // background-image: radial-gradient(#f4f4f4 30%, #fff 70%);
+        background: #fff;
+        box-shadow: 0rem .5rem .5rem rgba(0, 0, 0, 0.1);
+        opacity: 0;
+    }
+
+    // ITEM DARK-THEME
+    @include abstracts.dark {
+        background: #222;
+        border: 1px solid #fff3;
+        &::before {
+            background: #222;
+        }
+        &::after {
+            background: #333;
+        }
+    }
+
+
+    // FLEX ITEM 1 = ICON + H4
+    .service-core {
+        display: flex;
+        flex-direction: column-reverse;
+
+        h4 {
+            text-transform: capitalize;
+            font-size: 1.25rem;
+            font-size: abstracts.$font-clamp-md;
+            font-weight: 500;
+            transition: 250ms ease;
+        }
+
+        .active-icon {
+            // border: 1px solid red;
+            position: relative;
+            display: grid;
+            height: 2.5rem;
+
+            img {
+                position: absolute;
+
+                &.light-icon {
+                    opacity: 0;
+                }
+                
+
+                @include abstracts.dark {
+                    &.light-icon {
+                        opacity: 1;
+                    }
+                    &.dark-icon {
+                        opacity: 0;
+                    }
+                }
+
+
+            }
+        }
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+            transform: translateY(-1rem);
+            padding: 0;
+            transition: 250ms;
+            filter: drop-shadow(.1rem .25rem .125rem rgba(0, 0, 0, .2));
+        }
+
+    }
+
+    // SERVICES TYPE = UL OF SERVICE ITEMS 
+    // PADDING ON THIS ELEMENT FOR WHITESPACE
+    .service-type {
+
+        ul {
+            margin-top: 1rem;
+            border-radius: abstracts.$border-radius-xsm;
+            overflow: hidden;
+
+            li {
+                padding: 0.5rem 0.25rem;
+
+                text-transform: capitalize;
+                text-wrap: balance;
+
+                font-weight: 400;
+                font-size: abstracts.$font-clamp-xsm;
+                font-family: abstracts.$font-content;
+
+                list-style: none;
+
+                transition: color 250ms, background 0s;
+                background-color: #f4f4f4;
+
+
+                &:nth-child(2n) {
+                    background-color: #fafafa;
+                }
+
+                &:last-child {
+                    background-color: #ffff;
+                    background-color: transparent;
+                }
+
+                // DARK THEME LI
+
+                @include abstracts.dark {
+                            color: #fff;
+                            background-color: #333;
+        
+            
+                            &:nth-child(2n) {
+                                background-color: hsl(0, 0%, 30%);
+                            }
+            
+                            &:last-child {
+                                background-color: transparent;
+                            }
+                } 
+            }
+
+            .service-cta {
+                border-bottom: none;
+                list-style: none;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                margin: 1rem 0 0;
+                padding-block: .5rem;
+                gap: .5rem;
+
+
+                @include abstracts.md {
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                    width: 50%;
+                }
+
+                a {
+                    text-decoration: underline abstracts.$brand-light;
+                    text-underline-offset: 2px;
+                    display: block;
+                    transition: 0ms;
+
+                    &:hover,
+                    &:focus {
+                        color: abstracts.$brand-light;
+                        text-decoration-color: transparent;
+                        transition: 250ms;
+                    }
+                }
+
+                .icon {
+                    opacity: .7;
+                }
+
+                &:hover {
+                    i {
+                        transform: translateX(.25rem);
+                        color: abstracts.$brand;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // INTERSECTION OBSERVER CLASSES
+    &.io-item {
+        &::before {
+            opacity: 0;
+        }
+
+        transform: scale(.98);
+    }
+
+    // ACTIVE IO CLASS
+    &.active-item {
+        transform: scale(1);
+
+        &::before {
+            opacity: 1;
+            transition: 250ms;
+        }
+    }
+
+    // END OF SCROLL
+    // ITEM HOVER EFFECT
+    &:hover {
+        transition: 350ms ease-out;
+        transform: scale(1.01);
+        animation: card-hover 400ms ease-in-out;
+
+        @media (prefers-reduced-motion) {
+            animation: none;
+        }
+
+        @include abstracts.lg {
+            transform: scale(1.01);
+        }
+
+        // BOX SHADOW TRANSITION ON HOVER
+        &::before {
+            opacity: 0;
+        }
+
+        &::after {
+            opacity: 1;
+            transition: 300ms;
+            transition-delay: 200ms;
+        }
+
+        // CARD ICON TRANSLATE DOWN INTO CARD ON HOVER
+        // CARD TITLE CHANGE COLOR ON HOVER
+        .service-core {
+            img {
+                transform: translateY(-0.25rem);
+                filter: drop-shadow(0rem .25rem .1rem rgba(0, 0, 0, .250));
+                transition: 500ms ease 150ms;
+
+                // &.dark-icon {
+                //     opacity: 0;
+                // }
+
+                // &.light-icon {
+                //     opacity: 1;
+                // }
+            }
+
+            h4 {
+                color: abstracts.$brand;
+                transition-delay: 150ms;
+                transition-duration: 150ms;
+            }
+        }
+
+        // ON HOVER LIST ITEM MARKER CHANGE COLOR
+        // .service-type {
+        //     ul {
+        //         li {
+        //             background: transparent;
+        //             color: #fff;
+        //             background-color: #333;
+
+
+        //         &:nth-child(2n) {
+        //             background-color: hsl(0, 0%, 30%);
+        //         }
+
+        //         &:last-child {
+        //             background-color: transparent;
+        //         }
+        //         }
+        //         .service-cta {
+        //             .icon {
+        //                 opacity: 1;
+        //             }
+        //         }
+        //     }   
+        // }
+    }
+}
+
+#services-page {
+
+    // 'OUR PROMISES' CARD = SERVICES PAGE
+    // CARD = TITLE[H3] + UL[ LI = TITLE[H4] + P ]
+    .promise {
+        background: linear-gradient(90deg, #000, #000);
+        color: abstracts.$text-light;
+        padding: 1rem;
+        margin: 5vh 0;
+        border-radius: abstracts.$border-radius-sm;
+        isolation: isolate;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 .25rem .5rem hsla(39, 100%, 50%, .2),
+                    0 .5rem 1rem #0002;
+    
+        // CARD HAS NO MARGIN ON BIGGER SCREENS 
+        @include abstracts.md {
+            margin: 0;
+        }
+        
+    
+        h3 {
+            color: abstracts.$brand;
+            font-size: abstracts.$font-clamp-lg;
+            text-align: center;
+            margin-bottom: 5vh;
+        }
+        ul {
+            li {
+                margin-bottom: 5vh;
+                padding-bottom: .5rem;
+                list-style: none;
+                position: relative;
+                h4 {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: .5rem;
+                    letter-spacing: .025rem;
+                    transition: .5s;
+                }
+                p {
+                    color: #ddd;
+                    font-weight: 400;
+                    font-family: abstracts.$font-content;
+                }
+    
+                // BRAND BOTTOM BORDER
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: .15rem;
+                    background: #f4f4f4;
+                    background: linear-gradient(90deg, #f4f4f4, abstracts.$brand);
+                    background: abstracts.$brand-overlay;
+                    border-radius: 5px;
+                    opacity: .5;
+                    transition: .5s;
+                    transform: scaleX(.8);
+                }
+    
+                &:hover {
+                    h4 {
+                        color: abstracts.$brand-light;
+                        letter-spacing: normal;
+                    }
+                    &:after {
+                        background: abstracts.$brand-border;
+                        transform: scaleX(1);
+                    }
+                }
+    
+            }
+        }
+    }
+    // FLEX CONTAINER = 'SERVICES DESC P + PROMISES CARD'
+    .services-flex-container {
+        @include abstracts.lg {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20vh 0 10vh;
+            .section-description {
+                padding: 1rem;
+                margin: 0;
+                h3 {
+                    font-size: abstracts.$font-clamp-md;
+                    margin-bottom: 5vh;
+                }
+
+                p {
+                    margin-bottom: 1rem;
+                }
+
+                
+            }
+        }
+    }
+
+}
