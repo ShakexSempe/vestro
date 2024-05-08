@@ -5,7 +5,7 @@
     top: 0;
     width: 100%;
     z-index: 20;
-    transition: all .25s;
+    transition: all 250ms;
     isolation: isolate;
     background-color: transparent;
     display: flex;
@@ -29,9 +29,9 @@
         width: 100%;
         height: 100%;
         background-color: transparent;
-        transition: .25s;
         z-index: -1;
         box-shadow: 0rem 1rem 1rem transparent;
+        transition: 0ms;
     }
 
     // DESKTOP HEADER - TOGGLE + ASIDE = DISPLAY NONE
@@ -55,9 +55,13 @@
     &.index-header {
         background-color: #fff;
         background-color: #000a;
-        background: transparent;       
+        background: transparent;
+        // &::after {
+        //     background-color: #fff3;
+        //     transition: 250ms;
+        // }       
     }
-    
+
     // HERO SECTION HEADER STYLE
     &.hero-header {
         height: 20vh;
@@ -149,16 +153,19 @@
             }
         }
     }
+
     // MAIN SECTION HEADER STYLE WHEN IO
     &.main-header {
+        
         &::after {
             background-color: #fff;
             box-shadow:  0rem .25rem 1rem rgba(0, 0, 0, .05);
-            transition: box-shadow .5s ease, background-color .25s;
+            transition: box-shadow .5s ease, background-color 125ms;
             @include abstracts.dark {
                 background-color: #000;
             }
         }
+        
         .navigation {
             .toggle {
                 .bar {
@@ -176,6 +183,7 @@
                 }
             }
         }
+
     }
     
 }

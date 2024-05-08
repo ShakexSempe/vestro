@@ -7,8 +7,11 @@
     position: relative;
     isolation: isolate;
     transition: 250ms;
+
+    padding: 10vh 0 0;
     
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-rows: 55% 1fr;
     grid-template-areas: 'image'
                             'title';
@@ -28,22 +31,23 @@
 // HERO-IMAGE = BACKGROUND IMAGE
 .hero-image {
     grid-area: image;
-    background: #0009;
     background: #fff9;
+    background: #0004;
     z-index: -1;
     // border: 2px solid green;
 
     img {
         height: 100%;
         width: 100%;
-
-        object-fit: cover;
+        
         object-fit: contain;
+        object-fit: cover;
+
         object-position: 50% 10%;
         object-position: 60% 50%;
         
-        // mix-blend-mode: overlay;
         mix-blend-mode: darken;
+        mix-blend-mode: overlay;
         // mix-blend-mode: lighten;
 
         @include abstracts.sm {
@@ -64,9 +68,8 @@
 .hero-title {
     grid-area: title;
     position: relative;
-    padding: 5vh 5vw 0;
     padding: 1rem 5vw 0;
-    padding: 0 5vw ;
+    padding: 5vh 5vw 0;
 
     // background: #000;
     // background: #f4f4f4;

@@ -97,7 +97,7 @@ heroObserver.observe(hero);
         // TRANSITIONS = 1) HEADER- FROM TRANSPARENT TO WHITE
         //              = 2) BUTTON LINK TO TOP OF THE PAGE
 const mainOptions = {
-    rootMargin: '0px 0px -80% 0px',
+    rootMargin: '0px 0px -10% 0px',
 };
 const mainObserver = new IntersectionObserver(
     function(entries, mainObserver){
