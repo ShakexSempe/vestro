@@ -84,9 +84,6 @@ main.contact-page-main form {
 
 section {
   min-height: 95vh;
-  border: 2px solid #9c3131;
-  outline: 1px solid #d35e29;
-  outline-offset: -5px;
   padding: 5vh 5vw;
 }
 @media (min-width: 768px) {
@@ -622,6 +619,7 @@ img {
 }
 .toggle .bar {
   background-color: #fff;
+  background-color: #000;
   width: 100%;
   height: 0.1em;
   position: relative;
@@ -635,6 +633,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: #fff;
+  background-color: #000;
   transition: 0.25s;
 }
 .toggle .bar::before {
@@ -1708,12 +1707,6 @@ img {
 #header.hero-header .navigation .toggle {
   top: 1rem;
 }
-#header.hero-header .navigation .toggle .bar {
-  background-color: #ffffff;
-}
-#header.hero-header .navigation .toggle .bar::after, #header.hero-header .navigation .toggle .bar::before {
-  background-color: #ffffff;
-}
 #header.hero-header .navigation .nav-link.active {
   color: #ffa500;
 }
@@ -1779,6 +1772,16 @@ img {
   object-position: left;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
+  cursor: default;
+  transition: 250ms;
+}
+@media (min-width: 500px) {
+  .logo a img {
+    cursor: pointer;
+  }
+}
+.logo a img:active {
+  transform: scale(0.95);
 }
 
 .navigation {
@@ -2131,12 +2134,12 @@ aside.active .social-links a {
 
 #hero {
   height: 95vh;
-  background: #000;
-  transition: 0.25s;
   position: relative;
   isolation: isolate;
+  transition: 250ms;
   display: grid;
   grid-template-rows: 55% 1fr;
+  grid-template-areas: "image" "title";
 }
 @media (min-width: 820px) {
   #hero {
@@ -2150,18 +2153,23 @@ aside.active .social-links a {
 }
 
 .hero-image {
+  grid-area: image;
   background: #0009;
+  background: #fff9;
   z-index: -1;
 }
 .hero-image img {
-  object-fit: cover;
-  object-position: 50% 10%;
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-fit: contain;
+  object-position: 50% 10%;
+  object-position: 60% 50%;
   mix-blend-mode: darken;
 }
 @media (min-width: 500px) {
   .hero-image img {
+    object-fit: cover;
     object-position: center;
     object-position: 50% 30%;
     margin-left: auto;
@@ -2176,9 +2184,11 @@ aside.active .social-links a {
 }
 
 .hero-title {
+  grid-area: title;
   position: relative;
+  padding: 5vh 5vw 0;
   padding: 1rem 5vw 0;
-  background: #000;
+  padding: 0 5vw;
 }
 @media (min-width: 500px) {
   .hero-title {
@@ -2192,14 +2202,14 @@ aside.active .social-links a {
   }
 }
 .hero-title .slogan {
-  color: #fff;
   position: relative;
   text-transform: capitalize;
 }
 .hero-title .slogan h1 {
   font-weight: 600;
   font-size: 1.05rem;
-  font-size: clamp(1.05rem, 3vw, 2.25rem);
+  font-size: clamp(1.05rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   line-height: 1.2;
   margin-bottom: 0.5rem;
   text-wrap: balance;
@@ -2219,7 +2229,6 @@ aside.active .social-links a {
   line-height: 1.6;
 }
 .hero-title .slogan .hero-meta {
-  color: #cccccc;
   font-weight: 200;
   display: flex;
   align-items: center;
@@ -2234,12 +2243,8 @@ aside.active .social-links a {
   opacity: 0.7;
 }
 .hero-title .slogan #cta .slogan-p {
-  color: #fff;
   margin: 0 0 1rem;
   letter-spacing: 0.0125rem;
-}
-.hero-title .slogan #cta .slogan-p span {
-  color: #ffa500;
 }
 .hero-title .slogan #cta .cta-btn {
   font-size: 0.85rem;

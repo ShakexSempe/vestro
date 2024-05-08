@@ -52,9 +52,9 @@ main {
 
 section {
     min-height: 95vh;
-    border: 2px solid abstracts.$brand-red;
-    outline: 1px solid abstracts.$brand-orange;
-    outline-offset: -5px;
+    // border: 2px solid abstracts.$brand-red;
+    // outline: 1px solid abstracts.$brand-orange;
+    // outline-offset: -5px;
     padding: 5vh 5vw;
 
     @include abstracts.md {

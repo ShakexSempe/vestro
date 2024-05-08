@@ -57,6 +57,7 @@
         background-color: #000a;
         background: transparent;       
     }
+    
     // HERO SECTION HEADER STYLE
     &.hero-header {
         height: 20vh;
@@ -105,12 +106,12 @@
             .toggle {
                 top: 1rem;
 
-                .bar {
-                    background-color: #ffffff;
-                    &::after, &::before {
-                        background-color: #ffffff;
-                    }
-                }
+                // .bar {
+                //     background-color: #ffffff;
+                //     &::after, &::before {
+                //         background-color: #ffffff;
+                //     }
+                // }
             }
 
             .nav-link {
@@ -125,6 +126,7 @@
             img {
                 border-bottom-left-radius: abstracts.$border-radius-xsm;
                 border-bottom-right-radius: abstracts.$border-radius-xsm;
+                
             }
         }
     }
@@ -197,6 +199,17 @@
             object-position: left;
             border-bottom-left-radius: abstracts.$border-radius-xsm;
             border-bottom-right-radius: abstracts.$border-radius-xsm;
+        
+            cursor: default;
+                transition: 250ms;
+
+                @include abstracts.sm {
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transform: scale(.95);
+                }
         }
     }
 }

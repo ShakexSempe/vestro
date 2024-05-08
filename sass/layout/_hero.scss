@@ -3,13 +3,15 @@
 // HERO 
 #hero {
     height: 95vh;
-    background: #000;
-    transition: .25s;
+    // background: #000;
     position: relative;
     isolation: isolate;
+    transition: 250ms;
     
     display: grid;
     grid-template-rows: 55% 1fr;
+    grid-template-areas: 'image'
+                            'title';
     // DESKTOP HERO
     @include abstracts.lg {
         display: flex;
@@ -25,17 +27,27 @@
 
 // HERO-IMAGE = BACKGROUND IMAGE
 .hero-image {
+    grid-area: image;
     background: #0009;
+    background: #fff9;
     z-index: -1;
+    // border: 2px solid green;
 
     img {
-        object-fit: cover;
-        object-position: 50% 10%;
         height: 100%;
         width: 100%;
+
+        object-fit: cover;
+        object-fit: contain;
+        object-position: 50% 10%;
+        object-position: 60% 50%;
+        
+        // mix-blend-mode: overlay;
         mix-blend-mode: darken;
+        // mix-blend-mode: lighten;
 
         @include abstracts.sm {
+            object-fit: cover;
             object-position: center;
             object-position: 50% 30%;
             margin-left: auto;
@@ -50,9 +62,15 @@
 
 // HERO PAGE TITLE
 .hero-title {
+    grid-area: title;
     position: relative;
+    padding: 5vh 5vw 0;
     padding: 1rem 5vw 0;
-    background: #000;
+    padding: 0 5vw ;
+
+    // background: #000;
+    // background: #f4f4f4;
+    // background: linear-gradient(0deg, #fff, #eee 60%);
 
     @include abstracts.sm {
         padding: 10vh 0 0 5vw;
@@ -65,20 +83,23 @@
 
     // SLOGAN
     .slogan {
-        color: abstracts.$text-light;
+        // color: abstracts.$text-light;
         position: relative;
         text-transform: capitalize;
 
         h1 {
             font-weight: 600;
             font-size: 1.05rem;
-            font-size: clamp(1.05rem, 3vw, 2.25rem);
+            font-size: clamp(1.05rem, 3vw, 2.5rem);
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
             line-height: 1.2;
             margin-bottom: 0.5rem;
             text-wrap: balance;
+
             br {
                 display: none;
             }
+
             @include abstracts.lg {
                 margin-bottom: 2rem;
                 br {
@@ -93,7 +114,7 @@
         }
 
         .hero-meta {
-            color: abstracts.$text-second-light;
+            // color: abstracts.$text-second-light;
             font-weight: 200;
             display: flex;
             align-items: center;
@@ -114,11 +135,11 @@
         #cta {
             // QUALITY OR NOTHING P
             .slogan-p {
-                color: abstracts.$text-light;
+                // color: abstracts.$text-light;
                 margin: 0 0 1rem;
                 letter-spacing: .0125rem;
                 span {
-                    color: abstracts.$brand-light;
+                    // color: abstracts.$brand-light;
                 }
                 // @include abstracts.lg {
                 //     margin: .5rem 0 1rem;
@@ -142,4 +163,5 @@
         }
         
     }
+
 }
