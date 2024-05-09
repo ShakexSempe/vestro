@@ -614,7 +614,7 @@ img {
   place-items: center;
   border-left-color: transparent;
   border-right-color: transparent;
-  z-index: 5;
+  z-index: 100;
   transition: 0.5s;
 }
 .toggle .bar {
@@ -1655,9 +1655,16 @@ img {
   width: 100%;
   height: 100%;
   background-color: transparent;
+  background-color: #fff;
   z-index: -1;
   box-shadow: 0rem 1rem 1rem transparent;
   transition: 0ms;
+  transition: box-shadow 500ms ease, background-color 250ms;
+}
+@media (prefers-color-scheme: dark) {
+  #header::after {
+    background-color: #000;
+  }
 }
 @media (min-width: 820px) {
   #header .navigation .toggle {
@@ -1667,15 +1674,8 @@ img {
     display: none;
   }
 }
-#header.index-header {
-  background-color: #fff;
-  background-color: #000a;
-  background: transparent;
-}
 #header.hero-header {
-  height: 20vh;
   height: 10rem;
-  padding: 1rem 5vw;
 }
 #header.hero-header::after {
   background-color: transparent;
@@ -1704,18 +1704,8 @@ img {
 #header.hero-header .navigation nav .dropdown button:hover, #header.hero-header .navigation nav .dropdown button:focus {
   color: #ffa500;
 }
-#header.hero-header .navigation .toggle {
-  top: 1rem;
-}
 #header.hero-header .navigation .nav-link.active {
   color: #ffa500;
-}
-#header.hero-header .logo {
-  padding: 0;
-}
-#header.hero-header .logo img {
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
 }
 #header.toggle-header::after {
   background-color: #000;
@@ -1755,15 +1745,16 @@ img {
 }
 
 .logo {
-  z-index: 1;
-  transition: 0.5s;
-  height: 100%;
+  transition: 500ms;
   width: auto;
+  width: 10rem;
+  height: 100%;
+  z-index: 1;
 }
 .logo a {
   overflow: hidden;
   width: 15rem;
-  transition: 0.25s;
+  transition: 250ms;
 }
 .logo a img {
   height: 100%;
