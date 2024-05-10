@@ -1319,9 +1319,6 @@ img {
 #header.hero-header .navigation {
   z-index: 5;
 }
-#header.hero-header .navigation nav {
-  transform: translateY(-1.5rem);
-}
 #header.hero-header .navigation nav ul li a {
   color: #ffffff;
 }
@@ -1335,7 +1332,7 @@ img {
   color: #ffa500;
 }
 #header.hero-header .navigation .nav-link.active {
-  color: #ffa500;
+  color: #9c3131;
 }
 #header.toggle-header::after {
   background-color: #000;
@@ -1524,7 +1521,7 @@ img {
   }
 }
 .navigation .nav-link.active {
-  color: #ffa500;
+  color: #9c3131;
 }
 
 aside {
