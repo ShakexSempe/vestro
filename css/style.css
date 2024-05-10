@@ -1275,6 +1275,7 @@ img {
   #header {
     height: 8vh;
     padding: 0.25rem 5vw;
+    padding: 0.25rem 10vw;
   }
 }
 #header::after {
@@ -1319,14 +1320,12 @@ img {
 #header.hero-header .navigation {
   z-index: 5;
 }
-#header.hero-header .navigation nav ul li a {
-  color: #ffffff;
-}
 #header.hero-header .navigation nav ul li a:hover, #header.hero-header .navigation nav ul li a:focus {
-  color: #ffa500;
+  color: #9c3131;
 }
 #header.hero-header .navigation nav .dropdown button {
   color: #ffffff;
+  color: inherit;
 }
 #header.hero-header .navigation nav .dropdown button:hover, #header.hero-header .navigation nav .dropdown button:focus {
   color: #ffa500;
@@ -1437,7 +1436,7 @@ img {
     transform: translateX(-50%) scale(0);
     width: 70%;
     height: 0.15rem;
-    background-color: #f8650c;
+    background-color: #9c3131;
     transition: 0.3s;
   }
   .navigation nav ul li a:hover::after, .navigation nav ul li a:focus::after {
@@ -1495,6 +1494,7 @@ img {
   }
   .navigation nav ul .dropdown .dropdown-content a:hover {
     color: #ffffff;
+    color: inherit;
     box-shadow: none;
     background-color: #000;
   }
@@ -1773,6 +1773,11 @@ aside.active .social-links a {
   background: #0004;
   z-index: -1;
 }
+@media (min-width: 500px) {
+  .hero-image {
+    background: none;
+  }
+}
 .hero-image img {
   height: 100%;
   width: 100%;
@@ -1790,8 +1795,8 @@ aside.active .social-links a {
 }
 @media (min-width: 820px) {
   .hero-image img {
-    width: 55vw;
-    object-position: 50% 0%;
+    padding-right: 10vw;
+    border-radius: 100%;
   }
 }
 
@@ -1810,6 +1815,7 @@ aside.active .social-links a {
   .hero-title {
     top: 30vh;
     padding: 5vh 0 0 5vw;
+    padding: 0vh 0 0 10vw;
   }
 }
 .hero-title .slogan {
@@ -1830,7 +1836,7 @@ aside.active .social-links a {
 }
 @media (min-width: 820px) {
   .hero-title .slogan h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .hero-title .slogan h1 br {
     display: block;
