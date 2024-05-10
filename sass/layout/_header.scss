@@ -172,26 +172,28 @@
 }
 
  // LOGO - STARTS WITH 0 OPACITY
-.logo {
-    transition: 500ms;
-    width: auto;
-    width: 10rem;
-    height: 100%;
-    z-index: 1;
+    
+    .logo {
+        width: 10rem;
+        width: auto;
+        height: 100%;
 
-    a {
-        overflow: hidden;
-        width: 15rem;
         transition: 250ms;
+        // overflow: hidden;
+        z-index: 1;
+        // border: 1px solid blue;
+
 
         img {
+            // border: 1px solid yellow;
             height: 100%;
             width: 100%;
+            // object-fit: cover;
             object-fit: contain;
-            object-position: left;
+            object-position: left bottom;
             border-bottom-left-radius: abstracts.$border-radius-xsm;
             border-bottom-right-radius: abstracts.$border-radius-xsm;
-        
+
             cursor: default;
             transition: 250ms;
 
@@ -205,7 +207,7 @@
 
         }
     }
-}
+
 
 .navigation {
     text-transform: capitalize;

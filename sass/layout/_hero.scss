@@ -52,10 +52,10 @@
 
         @include abstracts.sm {
             object-fit: cover;
-            object-position: center;
-            object-position: 50% 30%;
-            margin-left: auto;
-            width: 500px;
+            // object-position: center;
+            // object-position: 50% 30%;
+            // margin-left: auto;
+            // width: 500px;
         }
         @include abstracts.lg {
             width: 55vw;

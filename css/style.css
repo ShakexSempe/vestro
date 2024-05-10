@@ -1375,33 +1375,28 @@ img {
 }
 
 .logo {
-  transition: 500ms;
-  width: auto;
   width: 10rem;
+  width: auto;
   height: 100%;
+  transition: 250ms;
   z-index: 1;
 }
-.logo a {
-  overflow: hidden;
-  width: 15rem;
-  transition: 250ms;
-}
-.logo a img {
+.logo img {
   height: 100%;
   width: 100%;
   object-fit: contain;
-  object-position: left;
+  object-position: left bottom;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   cursor: default;
   transition: 250ms;
 }
 @media (min-width: 500px) {
-  .logo a img {
+  .logo img {
     cursor: pointer;
   }
 }
-.logo a img:active {
+.logo img:active {
   transform: scale(0.95);
 }
 
@@ -1794,10 +1789,6 @@ aside.active .social-links a {
 @media (min-width: 500px) {
   .hero-image img {
     object-fit: cover;
-    object-position: center;
-    object-position: 50% 30%;
-    margin-left: auto;
-    width: 500px;
   }
 }
 @media (min-width: 820px) {
