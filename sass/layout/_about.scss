@@ -4,18 +4,23 @@
     .about {
         position: relative;
         isolation: isolate;
-        @include abstracts.lg {
-            // padding: 10vh 0;
-        }
-        // DESKTOP GRID LAYOUT
-        // 2 COLUMNS = ARTICLE + MISSION STATEMENT CARD
         
-
         // DARK-THEME 
         @include abstracts.dark {
             background-color: #000;
             color: #f4f4f4;
         }
+
+        // DESKTOP ABOUT SECTION STYLE
+        @include abstracts.lg {
+            // border: 3px solid red;
+            background-image: url('../../img/work.jpg');
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 60%;
+            background-attachment: fixed;
+        }
+        
 
         
 
@@ -44,18 +49,26 @@
 
         p {
             font-family: abstracts.$font-content;
+            max-width: 600px;
 
-            &::first-letter {
-                font-size: 2rem;
-                padding: 0 .25rem 0 .25rem;
-                background: #000;
-                color: #fff;
-                float: left;
-                margin-right: 0.25rem;
-                border-radius: .25rem;
-                box-shadow: 2px 3px 3px hsla(211, 16%, 34%, 0.150);
-                text-shadow: 2px 2px 0px #f8650c;
-            }
+            // &::first-letter {
+            //     font-size: 2rem;
+            //     padding: 0 .25rem 0 .25rem;
+            //     background: #000;
+            //     color: #fff;
+            //     float: left;
+            //     margin-right: 0.25rem;
+            //     border-radius: .25rem;
+            //     box-shadow: 2px 3px 3px hsla(211, 16%, 34%, 0.150);
+            //     text-shadow: 2px 2px 0px #f8650c;
+            // }
+
+        @include abstracts.lg {
+            background-color: #fff;
+            padding: 0.5rem;
+            border-radius: 1rem;
+        }
+
 
         }
 

@@ -408,7 +408,7 @@ img {
   align-items: center;
   width: 11rem;
   width: clamp(11rem, 15vw, 12rem);
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.75rem;
   margin: 0.5rem 0;
   background: #ffa500;
   color: #000;
@@ -773,6 +773,15 @@ img {
     color: #f4f4f4;
   }
 }
+@media (min-width: 820px) {
+  .about {
+    background-image: url("../../img/work.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+    background-attachment: fixed;
+  }
+}
 
 .about-article {
   margin-top: 5vh;
@@ -793,17 +802,14 @@ img {
 }
 .about-article p {
   font-family: "Content", sans-serif;
+  max-width: 600px;
 }
-.about-article p::first-letter {
-  font-size: 2rem;
-  padding: 0 0.25rem 0 0.25rem;
-  background: #000;
-  color: #fff;
-  float: left;
-  margin-right: 0.25rem;
-  border-radius: 0.25rem;
-  box-shadow: 2px 3px 3px rgba(73, 86, 101, 0.15);
-  text-shadow: 2px 2px 0px #f8650c;
+@media (min-width: 820px) {
+  .about-article p {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
 }
 
 #banner {
