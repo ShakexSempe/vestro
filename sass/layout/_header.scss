@@ -18,6 +18,7 @@
     @include abstracts.lg {
         height: 8vh;
         padding: 0.25rem 5vw;
+        padding: 0.25rem 10vw;
     }
 
     // PSEUDO BACKGROUND COLORS
@@ -74,6 +75,8 @@
 
         @include abstracts.lg {
             height: 30vh;
+            height: 25vh;
+            // border-bottom: 1px solid red;
             background-color: transparent;
         }
         // NAV BAR LINKS UNDERLINES COLOR WHEN SCROLL CLASS ACTIVE
@@ -82,14 +85,14 @@
 
             nav {
                 // border: 1px solid red;
-                transform: translateY(-1.5rem);
+                // transform: translateY(-1.5rem);
 
                 ul {
                     li {
                         a {
-                            color: abstracts.$text-second;
+                            // color: abstracts.$text-second;
                             &:hover, &:focus {
-                                color: abstracts.$brand-light;
+                                color: abstracts.$brand-red;
                             }
                         }
                     }
@@ -98,6 +101,7 @@
                 .dropdown {
                     button {
                         color: abstracts.$text-second;
+                        color: inherit;
                         &:hover, &:focus {
                             color: abstracts.$brand-light;
                         }
@@ -107,7 +111,7 @@
 
             .nav-link {
                 &.active {
-                    color: abstracts.$brand-light;
+                    color: abstracts.$brand-red;
                 }
             }
 
@@ -174,26 +178,28 @@
 }
 
  // LOGO - STARTS WITH 0 OPACITY
-.logo {
-    transition: 500ms;
-    width: auto;
-    width: 10rem;
-    height: 100%;
-    z-index: 1;
+    
+    .logo {
+        width: 10rem;
+        width: auto;
+        height: 100%;
 
-    a {
-        overflow: hidden;
-        width: 15rem;
         transition: 250ms;
+        // overflow: hidden;
+        z-index: 1;
+        // border: 1px solid blue;
+
 
         img {
+            // border: 1px solid yellow;
             height: 100%;
             width: 100%;
+            // object-fit: cover;
             object-fit: contain;
-            object-position: left;
+            object-position: left bottom;
             border-bottom-left-radius: abstracts.$border-radius-xsm;
             border-bottom-right-radius: abstracts.$border-radius-xsm;
-        
+
             cursor: default;
             transition: 250ms;
 
@@ -207,7 +213,7 @@
 
         }
     }
-}
+
 
 .navigation {
     text-transform: capitalize;
@@ -253,7 +259,7 @@
                             transform: translateX(-50%) scale(0);
                             width: 70%;
                             height: .15rem;
-                            background-color: abstracts.$brand;
+                            background-color: abstracts.$brand-red;
                             transition: .3s;
                         }
 
@@ -319,6 +325,7 @@
 
                             &:hover {
                                 color: abstracts.$text-second;
+                                color: inherit;
                                 box-shadow: none;
                                 background-color: #000;
 
@@ -356,7 +363,7 @@
 
     .nav-link {
         &.active {
-            color: abstracts.$brand-light;
+            color: abstracts.$brand-red;
         }
     }
 }

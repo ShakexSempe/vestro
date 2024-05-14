@@ -8,7 +8,7 @@
     isolation: isolate;
     transition: 250ms;
 
-    padding: 10vh 0 0;
+    padding: 5vh 0 0;
     
     display: grid;
     grid-template-rows: auto 1fr;
@@ -20,6 +20,9 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
+        padding: 5vh 10vw 0 0;
+        // background-color: yellow;
     }
 
     // HERO ACTIVE BACKGROUND CLASS
@@ -36,6 +39,12 @@
     z-index: -1;
     // border: 2px solid green;
 
+    @include abstracts.sm {
+        background: none;
+    }
+
+
+
     img {
         height: 100%;
         width: 100%;
@@ -49,17 +58,22 @@
         mix-blend-mode: darken;
         mix-blend-mode: overlay;
         // mix-blend-mode: lighten;
+        // -webkit-mask: linear-gradient(0deg, transparent, #fff 60%) ;
+        //     mask: linear-gradient(0deg, transparent, #fff 60%);
 
         @include abstracts.sm {
             object-fit: cover;
-            object-position: center;
-            object-position: 50% 30%;
-            margin-left: auto;
-            width: 500px;
+            // object-position: center;
+            // object-position: 50% 30%;
+            // margin-left: auto;
+            // width: 500px;
         }
+        
         @include abstracts.lg {
-            width: 55vw;
-            object-position: 50% 0%;
+            border-radius: 1rem;
+            max-width: 800px;
+            -webkit-mask: linear-gradient(90deg, transparent, #fff 60%) ;
+            mask: linear-gradient(90deg, transparent, #fff 60%);
         }
     }
 }
@@ -80,8 +94,9 @@
     }
 
     @include abstracts.lg {
-        top: 30vh;
+        // top: 30vh;
         padding: 5vh 0 0 5vw;
+        padding: 0vh 0 0 10vw;
     }
 
     // SLOGAN
@@ -104,7 +119,7 @@
             }
 
             @include abstracts.lg {
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 br {
                     display: block;
                 }
@@ -150,7 +165,7 @@
             }
             .cta-btn {
                 font-size: 0.85rem;
-                font-size: abstracts.$font-clamp-sm;
+                // font-size: abstracts.$font-clamp-sm;
                 width: 12rem;
                 max-height: 4rem;
                 width: clamp(11rem, 15vw, 15rem);
