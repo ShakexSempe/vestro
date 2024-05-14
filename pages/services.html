@@ -64,28 +64,35 @@
     <div class="container" id="services-page">
         <!-- HEADER -->
 
-        <header id="header" data-header class="index-header">
-
+        <!-- HEADER = 1) LOGO 2) SECTION & PAGE NAVIGATION LINKS -->
+        <header id="header" data-header class="index-header hero-header">
             <!-- SKIP LINK -->
             <a href="#main" class="skip-link" tabindex="0">skip to main content</a>
-            
-            <div class="logo">
-                <a href="../index.html" title="Homepage">
-                    <img src="../img/orich.jpg" width="120" height="120" alt="Orich Trading logo">
-                </a>
-            </div>
-
+            <!-- LOGO = LINK TO TOP OF THE PAGE -->
+                    <a class="logo" href="../index.html">
+                        <!-- <picture>
+                            <source
+                            type="image/webp"
+                            srcset="img/orich-logo.webp"
+                            width="260"
+                            height="255"
+                            >
+                        </picture> -->
+                        <img src="../img/vestro-logo-xsm.jpg" width="250" height="250" alt="Vestro construction logo">
+                    </a>
+            <!-- DESKTOP NAVBAR & MOBILE HAMBURGER MENU -->
             <div class="navigation">
+                <!-- HAMBURGER MENU = HIDDEN ON DESKTOPS -->
                 <div id="toggle" class="toggle">
                     <div class="bar"></div>
                 </div>
-                <!-- SERVICES DROPDOWN -->
+                <!-- NAVBAR = HIDDEN ON MOBILE SCREENS -->
                 <nav id="nav">
                     <ul>
                         <!-- WEBSITE PAGE LINKS -->
                         <li><a class="nav-link" href="../index.html">home</a></li>
                         <li><a class="nav-link" href="about.html">about</a></li>
-                        <li><a class="nav-link" href="services.html">services</a></li>
+                        <li><a class="nav-link" href="#">services</a></li>
                         <li><a class="nav-link" href="projects.html">projects</a></li>
                         
                         <!-- CONTACT DROPDOWN BUTTON -->
@@ -98,10 +105,10 @@
                                 <a title="Contact-page" href="contact.html">contact page</a>
                             </div>
                         </li>
-                    
                     </ul>
                 </nav>
-                
+                <!-- SIDEBAR = HIDDEN ON DESKTOPS -->
+                <!-- SIDEBAR ACTIVATED BY JAVASCRIPT CLICK EVENT LISTENER -->
                 <aside id="aside" class="aside" >
                     
                     <!-- WEBSITE PAGE BROWSE -->
@@ -120,7 +127,7 @@
                         </li>
 
                         <!-- SERVICES DROPDOWN -->
-                        <li><a href="services.html" title="Services page" class="nav-link">
+                        <li><a href="#" title="Services page" class="nav-link">
                             <img class="icon nav-icon" src="../icons/outline/icons8-service-48-light.png" height="48" width="48" alt="Tools icon" >
                             services</a>
                         </li>
@@ -135,24 +142,19 @@
                     <!-- SOCIAL & CONTACT DETAILS -->
                     <div class="social-links">
                         
-                        <a target="_blank" style="--i:1;" title="Whatsapp number" href="https://wa.me/27729270758">
+                        <a target="_blank" style="--i:1;" title="Whatsapp number" href="https://wa.me/27795351811">
                             <img class="icon" src="../icons/aside/icons8-whatsapp-50.png" height="50" width="50" alt="Whatsapp icon">
-                            072 927 0758
+                            079 535 1811
                         </a>
 
-                        <a target="_blank" style="--i:2;" title="Phone number" href="tel:0734811460">
+                        <a target="_blank" style="--i:2;" title="Phone number" href="tel:083656678">
                             <img class="icon" src="../icons/brand-icons/icons8-outgoing-call-48-brand.png" height="48" width="48" alt="Outgoing phone-call icon">
-                            073 481 1460
+                            083 656 678
                         </a>
 
-                        <a target="_blank" style="--i:3;" title="Email address" href="mailto:info@orichtrading.co.za">
+                        <a target="_blank" style="--i:3;" title="Email address" href="mailto:info@vestromixcivils.co.za">
                             <img class="icon" src="../icons/solid/icons8-envelope-48-brand.png" height="48" width="48" alt="envelope icon">
-                            info@orichtrading.co.za
-                        </a>
-
-                        <a target="_blank" style="--i:5;" title="Instagram account" href="https://www.instagram.com/orichtradingprojects/?fbclid=IwAR3F4lHFYwmHfR52gYtnQj-8hMbTLDAuQd9yX4IndLP05Ocfu3ZUZQkSpyk">
-                            <img class="icon" src="../icons/solid/icons8-instagram-48-brand.png" height="48" width="48"  alt="Instagram icon">
-                            Instagram
+                            info@vestromixcivils.co.za
                         </a>
 
                     </div>
@@ -160,571 +162,138 @@
                 </aside>
 
             </div>
-
+            
         </header>
-
+        
         <!-- HERO -->
         <div id="hero">
-            
+
             <!-- HERO IMAGE -->
             <picture class="hero-image">
-                <source
+                <!-- <source
                 media="(min-width: 820.1px)"
                 width="800"
                 height="1035"
-                srcset="../img/hero_800.webp"
+                srcset="img/hero_800.webp"
                 >
                 <source
                 type="image/webp"
                 media="(max-width: 820px)"
                 width="488"
                 height="580"
-                srcset="../img/hero-mobile-web.webp"
-                >
+                srcset="img/hero-mobile-web.webp"
+                > -->
 
-                <img src="../img/mobile-hero-1.jpg" width="488" height="580" alt="Construction workers">
+                <img src="../img/hero-600.jpg" width="488" height="580" alt="Construction workers">
             </picture>
 
             <!-- WEBSITE SLOGAN -->
             <div id="title" class="hero-title">
+
                 <div class="slogan">
-                    <h1>level-1 BEE <br> Construction Company</h1>
+                    <h1>Civil Engineering & Construction</h1>
 
                     <p class="hero-meta">
-                        Johannesburg, South Africa
+                        <!-- <img class="icon hero-icon" src="../icons/contact/icons8-location-pin-50.png" width="50" height="50" alt="location pin"> -->
+                        Bloemfontein, South Africa
                     </p>
+
+                    <!-- CALL TO ACTION = LINK TO SERVICES MENU -->
                     <div id="cta" class="cta">
-                        <p class="slogan-p">Quality<span>Or</span>Nothing</p>
-                        <a href="#main" class="cta-btn" title="Main Section">our services
+                        <p class="slogan-p">Reliable & effective</p>
+                        <a href="#main" class="cta-btn" title="Main Section">let's work
                             <img src="../icons/solid/icons8-double-right-48-dark.png" class="icon hero-cta-icon" height="48" width="48" alt="double-right">
                         </a>
                     </div>
                 </div>
-                <!-- CALL TO ACTION = LINK TO SERVICES MENU -->
             </div>
-
             
-        </div>   
-
+        </div>
+        
         <!-- MAIN -->
-        <main id="main" class="main page-main">
+        <main class="main index-main" id="main" >
 
+
+            <!-- SECTION : SERVICES -->
             <section id="services" class="services">
+
+                <!-- SECTION TITLE -->
+                <div class="section-title io-item">
+                    <h2>services</h2>
+                </div>
                 
-                <div class="service-container" id="service-container">
-                    
-                    <div class="container-title io-item">
-                        <h2>our services</h2>
-                    </div>
-
-                    <div class="service-container index-container" id="service-container">
-    
-                        <!-- GRID CONTAINER -->
-                        <div class="grid-container">
-                            <!-- EACH SERVICE = 1) SERVICE CORE: TITLE & IMAGE. || 2) SERVICE TYPE = UL WITH 1 LINK TO ENQUIRY PAGE  -->
-    
-                            <!-- GENERAL BUILDING -->
-                            <div id="building_services" class="service-item io-item">
-    
-                                <div class="service-core">
-                                    <h4>General Building</h4>
-                                    <img class="icon" src="../icons/services/icons8-full-tool-storage-box-64.png" height="60" width="60" alt="wrench">
-                                </div>
-    
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Houses & offices</li>
-                                        <li>Wall Fence</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-    
-                            </div>
-    
-                            <!-- PAINTING -->
-                            <div id="painting" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>Painting</h4>
-                                    <img class="icon" src="../icons/services/icons8-paint-roller-64.png" height="64" width="64" alt="paint-roller">
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Cement Paint</li>
-                                        <li>oil paint</li>
-                                        <li>primer paint</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- PLUMBING -->
-                            <div id="plumbing_services" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>plumbing</h4>
-                                    <img class="icon" src="../icons/services/icons8-plumbing-100.png" height="100" width="100" alt="plumbing">
-                                </div>
-    
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Bathroom Set Installation</li>
-                                        <li>Electric Geyser & Solar Geyser</li>
-                                        <li>Rigid Copper Pipe</li>
-                                        <li>Stainless Steel Pipes</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-    
-                            </div>
-    
-                            <!-- ELECTRICAL -->
-                            <div id="electrical_services" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>electrical services</h4>
-                                    <img class="icon" src="../icons/services/icons8-plug-64.png" height="64" width="64" alt="electric plug">
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Boom Gate Installation, Setup & Maintenance</li>
-                                        <li>Electric Geyser & Solar Geyser</li>
-                                        <li>Energizer & Electrical Types</li>
-                                        <li>Wire Type</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- TITLE & ROOF -->
-                            <div id="roof" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>Roofing</h4>
-                                    <img class="icon" src="../icons/services/icons8-house-100.png" height="100" width="100" alt="roof house">
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Composite Roof Tiles</li>
-                                        <li>Concrete Roof Tiles</li>
-                                        <li>Clay Roof Tiles</li>
-                                        <li>Metal Roof Tiles</li>
-                                        <li>Slate Roof Tiles</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- CARPENTRY -->
-                            <div id="carpentry" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>Carpentry</h4>
-                                    <img class="icon" src="../icons/services/icons8-construction-carpenter-ruler-100.png" height="100" width="100" alt="carpenter-ruler">
-    
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Kitchen Units</li>
-                                        <li>Office Shelves</li>
-                                        <li>Wardrobe</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- PAVING -->
-                            <div id="paving" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>Paving</h4>
-                                    <img class="icon" src="../icons/services/icons8-pavement-100.png" height="100" width="100" alt="pavement">
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>brick Paving</li>
-                                        <li>Concrete Paving</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-    
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- WELDING -->
-                            <div id="welding" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>welding</h4>
-                                    <img class="icon" src="../icons/services/icons8-welder-100.png" height="100" width="100" alt="welder">
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Automated Gate Systems</li>
-                                        <li>Aluminium Windows & sliding doors</li>
-                                        <li>cages</li>
-                                        <li>pool gates</li>
-                                        <li>Window frames</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- CEILING -->
-                            <div id="ceiling" class="service-item io-item">
-                                <div class="service-core">
-                                    <h4>ceiling</h4>
-                                    <img class="icon" src="../icons/services/icons8-pavilion-100.png" height="100" width="100" alt="pavilion">
-                                </div>
-                                <div class="service-type">
-                                    <ul>
-                                        <li>Beam Ceiling</li>
-                                        <li>Conventional Ceiling</li>
-                                        <li>Coved Ceiling</li>
-                                        <li>Suspended Ceiling</li>
-                                        <li>Tray Ceiling</li>
-                                        <li class="service-cta">
-                                            <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                                            <a href="mailto:info@orichtrading.co.za">make enquiry</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                        </div>
-    
-                    </div>
-
-                </div>
-
-                <div class="services-flex-container">
-
-                    <div class="section-description">
-                        <h3>Industrial Relations</h3>
-                        <p>
-                            We specialize in Construction, Property
-                            Development and Handyman Services.
-                        </p>
-                        <p>
-                            We serve a broad market made of
-                            small businesses, professionals and individuals. <br>
-                            <div class="cta">
-                                <a class="cta-btn section-btn" href="mailto:info@orichtrading.co.za">make enquiry
-                                    <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope" class="icon">
-                                </a>
-                            </div>
-                            </p>
-                    </div>
-
-                    <div class="promise" id="promise">
-                        <h3>Our promise</h3>
-                        <ul>
-                            <li>
-                                <h4>Professionalism</h4>
-                                <p>We ensure excellence in every service function we deliver.</p>
-                            </li>
-                            <li>
-                                <h4>Reliability</h4>
-                                <p>We improve our effectiveness and efficiency, by making use of the
-                                    best products available.</p>
-                            </li>
-                            <li>
-                                <h4>Competency</h4>
-                                <p>We commit our skills and abilities to ensure peace-of-mind and to be
-                                    market leaders in the industry.</p>
-                            </li>
-                            <li>
-                                <h4>Pro-Activeness</h4>
-                                <p>We will conquer all challenges and opportunities to ensure the
-                                    competitive edge in the market place.</p>
-                            </li>
-                        
-                        </ul>
-                    </div>
-
-                </div>
-
+                <!-- SERVICE ITEMS -->
+                <ul>
+                    <li>Building construction</li>
+                    <li>Painting construction</li>
+                    <li>Paving construction</li>
+                    <li>Road Maintenance</li>
+                    <li>building renovations</li>
+                    <li>tiling construction</li>
+                    <li>roofing construction</li>
+                    <li>plastering construction</li>
+                    <li>ceiling construction</li>
+                </ul>
             </section>
 
-            <!-- FOOTER = 1) CONTACT DETAILS. 2) CONTACT FORM. 3) COPYRIGHT SECTION -->
-            <div id="contact">
-                <header class="section-title io-item">
-                    <h2 >contact us</h2>
-                </header>
-                
-                <!-- CONTACT INFO -->
-                <div id="contact-items" class="contact-items">
-
-                    <!-- PHONE NUMBERS  -->
-                    <div class="contact-item">
-                        
-                        <div class="contact-item-title">
-                            <img class="contact-icon" src="../icons/contact/icons8-smartphone-100.png" height="100" width="100" alt="smartphone" >
-                            <h3>phone numbers</h3>
-                        </div>
-                        <!-- THABELO CONTACT INFO-->
-                        <div class="contact-info">
-
-                            <div class="contact-info-item">
-                                
-                                <div class="flex-container">
-
-                                    <img src="../icons/solid/icons8-user-48-light.png"  height="48" width="48" class="icon" alt="user icon">
-                                    <p title="Thabelo - Executive Director">
-                                        Thabelo Mathoma
-                                        <span>E.D.</span>
-                                    </p>
-
-                                </div>
-
-                                <div class="flex-container">
-
-                                    <img src="../icons/solid/icons8-phone-48-light.png" alt="phone icon" height="48" width="48" class="icon">
-                                    <p>
-                                            <a href="tel:073 481 1460">073 481 1460</a> / 
-                                            <a href="tel:072 927 0758">072 927 0758</a>
-                                    </p>
-
-                                </div>
-
-                                <!-- CALL NOW BUTTON -->
-                                    <div class="item-button">
-                                    <a class="cta-btn contact-button" title="Call Thabelo" href="tel:072 927 0758">
-                                        call now
-                                        <img class="icon" src="../icons/solid/icons8-outgoing-call-48-dark.png" height="48" width="48" alt="phone call icon">
-                                    </a>
-                                    </div>
-                            </div>
-
-                        </div>
-
-                        <!-- NELSON CONTACT INFO -->
-                        <div class="contact-info">
-
-                            <div class="contact-info-item">
-                                <div class="flex-container">
-                                    <img src="../icons/solid/icons8-user-48-light.png"  height="48" width="48" class="icon" alt="user icon">
-                                    <p title="Sello Sempe CEO">
-                                        Sello Sempe <span>CEO</span>
-                                    </p>
-                            </div>
-                            <div class="flex-container">
-                                <img src="../icons/solid/icons8-phone-48-light.png" height="30" width="30" class="icon" alt="phone icon">
-                                <p title="phone number"><a href="tel:081 780 2088">081
-                                        780 2088</a></p>
-                                    </div>
-                                <div class="item-button">
-                                    <a class="cta-btn contact-button" title="Call Sello" href="tel:081 780 2088">call now
-                                        <img src="../icons/solid/icons8-outgoing-call-48-dark.png" height="64" width="64" alt="phone call icon" class="icon">
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div class="contact-item">
-                        <div class="contact-item-title">
-                            <img class="contact-icon" src="../icons/contact/icons8-open-email-64.png" height="64" width="64" alt="open email" >
-                            <h3>Email address</h3>
-                        </div>
-                        
-                        <div class="contact-info">
-                            <div class="contact-info-item">
-
-                                <div class="flex-container">
-
-                                    <img src="../icons/contact/icons8-envelope-100.png" alt="envelope icon" height="100" width="100" class="icon">
-                                    <p>
-                                        <a href="mailto:info@orichtrading.co.za">
-                                        info@orichtrading.co.za</a>
-                                    </p>
-
-                                </div>
-                                    
-                                <div class="item-button">
-                                    <a class="cta-btn" title="send email" href="mailto:info@orichtrading.co.za">send
-                                        Email
-                                        <img src="../icons/solid/icons8-sent-48-dark-rotated.png" height="48" width="48" alt="sent envelope icon" class="icon">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- SOCIAL MEDIA -->
-                    <div class="contact-item">
-
-                        <div class="contact-item-title">
-                            <img class="contact-icon" src="../icons/contact/icons8-users-64.png" height="64" width="64" alt="users">
-                            <h3>social media</h3>
-                        </div>
-                        
-                        <!-- FACEBOOK -->
-                        <div class="contact-info">
-
-                            <div class="contact-info-item">
-                                <div class="flex-container">
-                                    <img src="../icons/solid/icons8-facebook-48-light.png" height="48" width="48" class="icon" alt="facebook icon">
-                                    <p>Facebook</p>
-                                </div>
-                                <div class="item-button">
-                                    <a class="cta-btn btn-md" title="Facebook profile"
-                                        href="https://www.facebook.com/orichtrading" target="_blank">view account
-                                        <img src="../icons/solid/icons8-link-48-dark.png" height="48" width="48" alt="link icon" class="icon">
-                                        </a>
-                                </div>
-                            </div>
-
-                        </div>
-                            
-                        
-                        <!-- INSTAGRAM -->
-                        <div class="contact-info">
-
-                            <div class="contact-info-item">
-                                <div class="flex-container">
-                                    <img src="../icons/solid/icons8-instagram-48-light.png" height="48" width="48" alt="instagram icon" class="icon">
-                                    <p>Instagram</p>
-                                </div>
-                                <div class="item-button">
-                                    <a class="cta-btn btn-md" title="Facebook profile"
-                                        href="https://www.instagram.com/orichtradingprojects/?fbclid=IwAR3F4lHFYwmHfR52gYtnQj-8hMbTLDAuQd9yX4IndLP05Ocfu3ZUZQkSpyk"
-                                        target="_blank">view account
-                                        <img src="../icons/solid/icons8-link-48-dark.png" height="48" width="48" alt="link icon" class="icon">
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- LOCATION -->
-                    <div class="contact-item">
-                        <div class="contact-item-title">
-                            <img class="contact-icon" src="../icons/contact/icons8-map-marker-64.png" height="64" width="64" alt="map location marker" >
-                            <h3>location</h3>
-                        </div>
-                        <div class="contact-info">
-                            <div class="contact-info-item">
-                                <div class="flex-container">
-                                    <img src="../icons/solid/icons8-location-pin-48-light.png" alt="location pin icon" height="50" width="50" class="icon">
-                                    <p>Johannesburg, Gauteng</p>
-                                </div>
-                            <div class="item-button">
-                                <a class="cta-btn btn-md" title="Orich location" href="https://goo.gl/maps/xipWF492X1BgCwsDA"
-                                    target="_blank">google maps
-                                    <img src="../icons/solid/icons8-link-48-dark.png" height="48" width="48" alt="link icon" class="icon">
-                                </a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- FORM -->
-                <form id="form" class="contact-form" target="_blank" action="https://formsubmit.co/info@orichtrading.co.za"
-                    method="POST">
-                    <div class="container-title form-container-title io-item">
-                        <h2>let's talk</h2>
-                    </div>
-                    <!-- NAME -->
-                    <label for="name">name :</label>
-                    <input type="text" name="Name" id="username" placeholder="Enter your full name.." minlength="2"
-                        required>
-                    <!-- EMAIL -->
-                    <label for="email">email :</label>
-                    <input type="email" name="Email" id="email" placeholder="Enter your email address.." 
-                        required>
-                    <!-- TEXTAREA -->
-                    <label for="message">subject of enquiry :</label>
-                    <textarea name="Subject" rows="4" cols="10" minlength="2" placeholder="eg. Bathroom Set Installation"
-                        id="message"  required></textarea>
-
-                    <button class="cta-btn" type="submit" title="submit form">submit enquiry
-                        <img class="icon" src="../icons/contact/icons8-sent-100.png" alt="sent envelope" height="100" width="100" >
-                    </button>
-                    <!-- form options -->
-                    <input type="hidden" name="_subject" value="New submission!">
-                    <input type="hidden" name="_autoresponse"
-                        value="We have has received your enquiry. We will be in touch shortly.Thank you.">
-                    <input type="hidden" name="_next" value="https://orichtrading/pages/thanks.html">
-                    <input type="hidden" name="_template" value="box">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_cc" value="orichtradingprojects@gmail.com">
-
-
-                </form>
-                <!-- END OF FORM -->
-            </div>
-
+            
             <!-- FOOTER -->
             <div class="footer" id="footer">
-
                 <!-- FOOTER LOGO -->
                 <div class="footer-logo">
-                    <picture>
+                    <!-- <picture>
                         <source
                         type="image/webp"
-                        srcset="../img/orich-logo.webp"
+                        srcset="img/orich-logo.webp"
                         width="250"
                         height="250"
                         >
-                        <img src="../img/orich-logo.png" loading="lazy" width="250" height="250" alt="Orich Trading & Projects Logo">
-                    </picture>
+                    </picture> -->
+                    <img src="../img/vestro-logo.jpg" loading="lazy" width="150" height="120" alt="Vestro Civil & Construction Logo">
                 </div>
 
-                <!-- COPYRIGHT INFO -->
+                <!-- FOOTER COPYRIGHT INFO -->
                 <div class="footer-item footer-copyright">
                     <div class="footer-item-title">
                         <h3>all rights reserved</h3>
                     </div>
-                    <p>copyright Orich trading & projects</p>
-                    <p>web design <a href="https://shakexsempe.netlify.app/" target="_blank">shakex sempe</a></p>
+                    <p>copyright &copy; Vestromix Civil & Construction (Pty) Ltd</p>
+                    <p>Bloemfontein, Gauteng</p>
+                    <p>web design: <a href="https://shakexsempe.netlify.app/" target="_blank">shakex sempe</a></p>
                     <p><span id="date"></span></p>
                 </div>
 
-                <!-- BROWSE WEBSITE -->
+                <!-- FOOTER BROWSE -->
                 <div class="footer-item">
+
                     <div class="footer-item-title">
-                        <h3>browse</h3>
+                        <h3>browse website</h3>
                     </div>
+
                     <ul class="footer-list page-links">
+
                         <li>
                             <img class="icon" src="../icons/contact/icons8-home-page-48.png" alt="home page icon" height="48" width="48">
                             <a href="../index.html">home</a>
                         </li>
+
                         <li>
                             <img class="icon" src="../icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
-                            <a href="services.html">services</a></li>
+                            <a href="about.html">about</a>
+                        </li>
+
                         <li>
                             <img class="icon" src="../icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
-                            <a href="projects.html">projects</a></li>
+                            <a href="#">services</a>
+                        </li>
+
                         <li>
                             <img class="icon" src="../icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
-                            <a href="contact.html">contact us</a></li>
+                            <a href="projects.html">projects</a>
+                        </li>
+
                     </ul>
+
                 </div>
 
                 <!-- FOOTER CONTACT ITEMS -->
@@ -736,27 +305,40 @@
 
                     <ul class="footer-list contact-links">
 
+                        <!-- EMAIL -->
                         <li>
                             <img src="../icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
-                            <a href="mailto:info@orichtrading.co.za">info@orichtrading.co.za</a>
+                            <a href="mailto:info@vestromixcivils.co.za">info@vestromixcivils.co.za</a>
                         </li>
+
+                        <!-- PHONE NUMBER -->
                         <li>
                             <img src="../icons/solid/icons8-outgoing-call-48-dark.png" height="48" width="48" alt="outgoing call icon" class="icon">
-                            <a target="_blank" style="--i:2;" href="tel:0734811460">073 481 1460</a>
+                            <a target="_blank" style="--i:2;" href="tel:079 535 1811">079 535 1811</a>
                         </li>
+
+                        <!-- PHONE NUMBER -->
+                        <li>
+                            <img src="../icons/solid/icons8-outgoing-call-48-dark.png" height="48" width="48" alt="outgoing call icon" class="icon">
+                            <a target="_blank" style="--i:2;" href="tel:083 656 678">083 656 678</a>
+                        </li>
+
+                        <!-- FACEBOOK -->
                         <li>
                             <img src="../icons/solid/icons8-facebook-48-dark.png" height="48" width="48" alt="Facebook icon" class="icon">
-                            <a target="_blank" href="https://www.facebook.com/photo/?fbid=130044952743326&set=a.130045042743317">Facebook</a>
+                            <a target="_blank" href="">Facebook</a>
                         </li>
+
                         <li>
                             <img src="../icons/solid/icons8-info-squared-48-dark.png" height="48" width="48" alt="Info square icon" class="icon">
-                            <a href="contact.html">Contact Page</a>
+                            <a href="pages/contact.html">Contact Page</a>
                         </li>
+
                     </ul>
                 </div>
 
             </div>
-        
+            
         </main>
 
         <!-- FOOTER-NAVIGATION -->
