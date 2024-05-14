@@ -5,6 +5,10 @@
     background: #f4f4f4;
     padding: 10vh 5vw;
 
+    @include abstracts.md {
+        padding: 10vw 10vw;
+    }
+
     @include abstracts.dark {
         background: #000;
         color: #f4f4f4;

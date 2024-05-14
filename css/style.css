@@ -811,6 +811,10 @@ img {
     border-radius: 1rem;
   }
 }
+.about-article a {
+  text-transform: capitalize;
+  color: #f8650c;
+}
 
 #banner {
   background-color: #fff;
@@ -2451,6 +2455,11 @@ aside.active .social-links a {
 .services {
   background: #f4f4f4;
   padding: 10vh 5vw;
+}
+@media (min-width: 768px) {
+  .services {
+    padding: 10vw 10vw;
+  }
 }
 @media (prefers-color-scheme: dark) {
   .services {
