@@ -3,6 +3,7 @@
     // ABOUT SECTION
     .about {
         position: relative;
+        isolation: isolate;
         @include abstracts.lg {
             // padding: 10vh 0;
         }
@@ -16,17 +17,33 @@
             color: #f4f4f4;
         }
 
+        
+
     }
     
     // ABOUT ARTICLE
     .about-article {
         margin-top: 5vh;
-        
+        position: relative;
+        isolation: isolate;
+
+        // ARTICLE DEPTH EFFECT
+        &::after {
+            content: 'V';
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            font-size: 15rem;
+            color: abstracts.$brand-red;
+            opacity: 0.125;
+            filter: blur(0.5rem);
+            z-index: -1;
+
+        }
+
         p {
             font-family: abstracts.$font-content;
-            position: relative;
-            isolation: isolate;
-            overflow: hidden;
 
             &::first-letter {
                 font-size: 2rem;

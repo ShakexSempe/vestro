@@ -764,6 +764,7 @@ img {
 }
 .about {
   position: relative;
+  isolation: isolate;
 }
 @media (prefers-color-scheme: dark) {
   .about {
@@ -774,12 +775,23 @@ img {
 
 .about-article {
   margin-top: 5vh;
+  position: relative;
+  isolation: isolate;
+}
+.about-article::after {
+  content: "V";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 15rem;
+  color: #9c3131;
+  opacity: 0.125;
+  filter: blur(0.5rem);
+  z-index: -1;
 }
 .about-article p {
   font-family: "Content", sans-serif;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
 }
 .about-article p::first-letter {
   font-size: 2rem;
