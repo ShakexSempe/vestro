@@ -1891,7 +1891,6 @@ aside.active .social-links a {
   letter-spacing: 0.0125rem;
 }
 .hero-title .slogan #cta .cta-btn {
-  font-size: 0.85rem;
   width: 12rem;
   max-height: 4rem;
   width: clamp(11rem, 15vw, 15rem);
