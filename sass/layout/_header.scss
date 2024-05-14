@@ -75,6 +75,8 @@
 
         @include abstracts.lg {
             height: 30vh;
+            height: 25vh;
+            // border-bottom: 1px solid red;
             background-color: transparent;
         }
         // NAV BAR LINKS UNDERLINES COLOR WHEN SCROLL CLASS ACTIVE

@@ -196,7 +196,7 @@ h3 {
 }
 
 p {
-  color: #333;
+  color: #222;
   font-family: "Content", sans-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 300;
@@ -419,6 +419,7 @@ img {
   font-weight: 500;
   text-decoration: none;
   text-transform: capitalize;
+  text-transform: uppercase;
   position: relative;
   isolation: isolate;
   transition: 0.25s;
@@ -1326,6 +1327,7 @@ img {
 @media (min-width: 820px) {
   #header.hero-header {
     height: 30vh;
+    height: 25vh;
     background-color: transparent;
   }
 }
@@ -1773,6 +1775,8 @@ aside.active .social-links a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    padding: 5vh 10vw 0 0;
   }
 }
 #hero.active {
@@ -1807,8 +1811,8 @@ aside.active .social-links a {
 }
 @media (min-width: 820px) {
   .hero-image img {
-    padding-right: 10vw;
-    border-radius: 100%;
+    border-radius: 1rem;
+    max-width: 800px;
   }
 }
 
@@ -1825,7 +1829,6 @@ aside.active .social-links a {
 }
 @media (min-width: 820px) {
   .hero-title {
-    top: 30vh;
     padding: 5vh 0 0 5vw;
     padding: 0vh 0 0 10vw;
   }
@@ -2412,7 +2415,7 @@ aside.active .social-links a {
   margin-bottom: 0.75rem;
 }
 #references .references .reference p {
-  color: #333;
+  color: #222;
   font-family: "Content", sans-serif;
 }
 #references .references .reference .card-item {
