@@ -415,7 +415,7 @@ img {
   border: none;
   border-radius: 0.5rem;
   font-size: 0.85rem;
-  font-size: clamp(.98rem, 1.25vw, 1.025rem);
+  font-size: clamp(.95rem, 1.25vw, 1.025rem);
   font-weight: 500;
   text-decoration: none;
   text-transform: capitalize;
@@ -930,7 +930,7 @@ img {
   border-radius: 0.25rem;
   padding: 0.5rem;
   transition: 0.25s;
-  font-size: clamp(.98rem, 1.25vw, 1.025rem);
+  font-size: clamp(.95rem, 1.25vw, 1.025rem);
 }
 @media (min-width: 768px) {
   .banner-image-container figure .banner-content .banner-image-title .flex-item {
@@ -1786,7 +1786,7 @@ aside.active .social-links a {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 5vh 10vw 0 0;
+    padding: 5vh 10vw;
   }
 }
 #hero.active {
@@ -1821,10 +1821,11 @@ aside.active .social-links a {
 }
 @media (min-width: 820px) {
   .hero-image img {
-    border-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     max-width: 800px;
-    -webkit-mask: linear-gradient(90deg, transparent, #fff 60%);
-    mask: linear-gradient(90deg, transparent, #fff 60%);
+    -webkit-mask: linear-gradient(90deg, transparent, #ffffff 30%);
+    mask: linear-gradient(90deg, transparent, #fff 30%);
   }
 }
 
@@ -1833,16 +1834,21 @@ aside.active .social-links a {
   position: relative;
   padding: 1rem 5vw 0;
   padding: 5vh 5vw 0;
+  background: #fafafa;
+  background: linear-gradient(0deg, #fff, #fafafa 60%);
 }
 @media (min-width: 500px) {
   .hero-title {
-    padding: 10vh 0 0 5vw;
+    padding: 5vh 0 0 5vw;
   }
 }
 @media (min-width: 820px) {
   .hero-title {
+    background: linear-gradient(90deg, #f7f7f7, #fff);
     padding: 5vh 0 0 5vw;
-    padding: 0vh 0 0 10vw;
+    padding: 10vh 0 0vh;
+    padding: 0.5rem;
+    border-radius: 1rem;
   }
 }
 .hero-title .slogan {
@@ -1888,7 +1894,6 @@ aside.active .social-links a {
 }
 .hero-title .slogan #cta .slogan-p {
   margin: 0 0 1rem;
-  letter-spacing: 0.0125rem;
 }
 .hero-title .slogan #cta .cta-btn {
   width: 12rem;
