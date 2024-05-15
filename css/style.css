@@ -1545,7 +1545,7 @@ img {
   }
 }
 .navigation .nav-link.active {
-  color: #9c3131;
+  color: #f8650c;
 }
 
 aside {
@@ -1910,7 +1910,7 @@ aside.active .social-links a {
   height: 80vh;
   position: relative;
   isolation: isolate;
-  background: linear-gradient(-45deg, transparent 50%, #fff 75%);
+  background: linear-gradient(-45deg, transparent 40%, #fffa 60%);
 }
 @media (min-width: 768px) {
   .cta-section {

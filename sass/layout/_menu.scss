@@ -7,7 +7,7 @@
     isolation: isolate;
     // background: #eee;
     // background: hsl(0, 0%, 70%);
-    background: linear-gradient(-45deg, transparent 50%, #fff 75%);
+    background: linear-gradient(-45deg, transparent 40%, #fffa 60%);
 
     @include abstracts.md {
         background-image: url('../../img/hero.jpg');
