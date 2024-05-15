@@ -179,40 +179,40 @@
 
  // LOGO - STARTS WITH 0 OPACITY
     
-    .logo {
-        width: 10rem;
-        width: auto;
+.logo {
+    width: 10rem;
+    width: auto;
+    height: 100%;
+
+    transition: 250ms;
+    // overflow: hidden;
+    z-index: 1;
+    // border: 1px solid blue;
+
+
+    img {
+        // border: 1px solid yellow;
         height: 100%;
+        width: 100%;
+        // object-fit: cover;
+        object-fit: contain;
+        object-position: left bottom;
+        border-bottom-left-radius: abstracts.$border-radius-xsm;
+        border-bottom-right-radius: abstracts.$border-radius-xsm;
 
+        cursor: default;
         transition: 250ms;
-        // overflow: hidden;
-        z-index: 1;
-        // border: 1px solid blue;
 
-
-        img {
-            // border: 1px solid yellow;
-            height: 100%;
-            width: 100%;
-            // object-fit: cover;
-            object-fit: contain;
-            object-position: left bottom;
-            border-bottom-left-radius: abstracts.$border-radius-xsm;
-            border-bottom-right-radius: abstracts.$border-radius-xsm;
-
-            cursor: default;
-            transition: 250ms;
-
-            @include abstracts.sm {
-                cursor: pointer;
-            }
-
-            &:active {
-                transform: scale(.95);
-            }
-
+        @include abstracts.sm {
+            cursor: pointer;
         }
+
+        &:active {
+            transform: scale(.95);
+        }
+
     }
+}
 
 
 .navigation {
@@ -363,7 +363,7 @@
 
     .nav-link {
         &.active {
-            color: abstracts.$brand-red;
+            color: abstracts.$brand;
         }
     }
 }
@@ -402,7 +402,7 @@ aside {
             justify-content: center;
             align-items: center;
             transition: 1s;
-            transform: translateX(2em);
+            transform: translateY(-1rem);
             opacity: 0;
 
             &.aside-dropdown {
@@ -609,6 +609,7 @@ aside {
             }
         }
     }
+
     // HAMBURGER ACTIVE CLASS
     &.active {
         // DISPLAY ASIDE FROM RIGHT
@@ -616,7 +617,7 @@ aside {
         // DISPLAY UL
         ul {
             li {
-                transform: translateX(0);
+                transform: translateY(0);
                 opacity: 1;
             }
             :nth-child(1) {
@@ -648,4 +649,5 @@ aside {
             }
         }
     }
+
 }
