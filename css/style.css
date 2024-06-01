@@ -1786,7 +1786,7 @@ aside.active .social-links a {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 5vh 10vw;
+    padding: 10vh 10vw 0vh;
   }
 }
 #hero.active {
