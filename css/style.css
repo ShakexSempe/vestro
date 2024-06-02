@@ -1964,123 +1964,43 @@ aside.active .social-links a {
   opacity: 0.75;
 }
 
+#projects {
+  background-color: #e6e6e6;
+}
 @media (prefers-color-scheme: dark) {
   #projects {
     background-color: #222;
     color: #f4f4f4;
   }
 }
-#projects .gallery {
-  margin: 5vh auto;
-}
-#projects .gallery .gallery-title {
-  position: sticky;
-  top: 7vh;
-  text-transform: capitalize;
-  padding: 0.25rem 0;
-  background-color: #fff;
-  z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (min-width: 820px) {
-  #projects .gallery .gallery-title {
-    top: 8vh;
-  }
-}
-#projects .gallery .gallery-title .cta-btn {
-  width: 6.5rem;
-  width: clamp(6rem, 10vw, 8rem);
-  font-size: 0.9rem;
-  border-radius: 0.5rem;
-  color: #000;
-  padding: 0.25rem 0.5rem;
-}
-@media (min-width: 820px) {
-  #projects .gallery .gallery-title .cta-btn {
-    padding: 0.5rem;
-  }
-}
-#projects .gallery .gallery-title .cta-btn .icon {
-  width: 0.65rem;
-  width: clamp(.65rem, 1.5vw, .95rem);
-  height: 100%;
-}
-@media (prefers-color-scheme: dark) {
-  #projects .gallery .gallery-title {
-    background-color: #222;
-  }
-}
-#projects .gallery .gallery-grid {
+#projects .projects-container {
+  margin: 10vh auto;
   display: grid;
-  gap: 5vh;
-  margin-bottom: 5vh;
-  height: auto;
-  overflow: hidden;
-  padding: 1rem 1rem 5vh 1rem;
+  gap: 10vh;
 }
 @media (min-width: 768px) {
-  #projects .gallery .gallery-grid {
+  #projects .projects-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
   }
 }
-#projects .gallery .project-item {
-  height: 40vh;
-  border-radius: 0.5rem;
-}
-@media (min-width: 768px) {
-  #projects .gallery .project-item {
-    height: 50vh;
+@media (min-width: 820px) {
+  #projects .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
   }
 }
-#projects .gallery .project-item figure {
-  position: relative;
-  width: 100%;
-  height: 40vh;
-  height: 100%;
-  border-radius: 0.5rem;
-  isolation: isolate;
-  position: relative;
-  z-index: 1;
+#projects .project-item {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  box-shadow: 0.125rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+  max-width: 450px;
 }
-#projects .gallery .project-item figure::before, #projects .gallery .project-item figure::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transition: 450ms ease;
-  border-radius: inherit;
+#projects .project-item .project-details {
+  padding: 0.5rem;
 }
-#projects .gallery .project-item figure::before {
-  box-shadow: 0 0.5rem 0.5rem #0002;
-}
-#projects .gallery .project-item figure::after {
-  opacity: 0;
-  box-shadow: inset 0.25rem 0.25rem 0.25rem rgba(255, 255, 255, 0.015), inset -0.25rem -0.25rem 0.25rem #0003, 0 0.25rem 0.5rem rgba(255, 166, 0, 0.125), 0 0.25rem 0.5rem #0003;
-}
-#projects .gallery .project-item figure img {
-  width: 100%;
-  height: 100%;
-  max-width: 600px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: inherit;
-  transition: 500ms;
-}
-#projects .gallery .project-item figure:hover {
-  animation: card-hover 450ms ease-in-out;
-}
-@media (prefers-reduced-motion) {
-  #projects .gallery .project-item figure:hover {
-    animation: none;
-  }
-}
-#projects .gallery .project-item figure:hover::before {
-  opacity: 0;
-}
-#projects .gallery .project-item figure:hover::after {
-  opacity: 1;
+#projects .project-item img {
+  max-height: 40vh;
 }
 
 #references {
