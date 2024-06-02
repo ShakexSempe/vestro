@@ -2099,8 +2099,10 @@ aside.active .social-links a {
 }
 
 .services {
-  background: #f4f4f4;
+  background-color: #f4f4f4;
   padding: 10vh 5vw;
+  position: relative;
+  isolation: isolate;
 }
 @media (min-width: 768px) {
   .services {
@@ -2128,6 +2130,27 @@ aside.active .social-links a {
 .services ul li:hover {
   color: #f8650c;
   transform: translateX(0.5rem);
+}
+.services::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50vh;
+  width: 50vw;
+  background-image: url("../../img/vestro-logo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.075;
+  mix-blend-mode: darken;
+}
+@media (min-width: 768px) {
+  .services::after {
+    opacity: 0.5;
+    background-size: contain;
+  }
 }
 
 @keyframes card-hover {
