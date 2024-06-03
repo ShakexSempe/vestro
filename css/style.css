@@ -627,7 +627,7 @@ img {
 }
 @media (min-width: 768px) {
   .scroller-container {
-    padding: 20vh 10vw;
+    padding: 26vh 10vw;
   }
 }
 .scroller-container .scroller-title {
@@ -637,6 +637,7 @@ img {
 
 .scroller {
   max-width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   z-index: -10;
 }
