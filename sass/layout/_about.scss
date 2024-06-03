@@ -4,11 +4,13 @@
     .about {
         position: relative;
         isolation: isolate;
-        
+        min-height: 50vh;
         // DARK-THEME 
         @include abstracts.dark {
             background-color: #000;
             color: #f4f4f4;
+            min-height: 70vh;   
+
         }
 
         // DESKTOP ABOUT SECTION STYLE
