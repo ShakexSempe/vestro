@@ -1,0 +1,113 @@
+@use '../abstracts';
+
+
+.tag-list {
+    list-style: none;
+
+    li {
+        padding: 1rem;
+        background: #485563;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem -0.25rem #0005;
+        font-size: .95rem;
+        font-size: clamp(.95rem, 2vw, 1rem);
+    }
+
+    &.img-list {
+        li {
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+.scroller-container {
+    // border: 2px solid blue;
+    padding: 0 5vw 5vh;
+
+    @include abstracts.md {
+        padding: 26vh 10vw;
+    }
+
+
+    .scroller-title {
+        margin-bottom: 5vh;
+        font-size: abstracts.$font-clamp-lg;
+    }
+}
+
+.scroller {
+    // border: 2px solid red;
+    // width: clamp(350px, 40vw, 600px);
+    // width: clamp(350px, 70vw, 900px);
+    max-width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: -10;
+
+    // @include abstracts.md {
+    //     margin: 25vh auto;
+    // }
+
+    // INNER SCROLLER
+    .scroller__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-block: 1rem;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 8rem;
+            @media (min-width: 768px) {
+                height: 10rem;
+            }
+        }
+    }
+
+
+    // ** SCROLLER WITH PREFERS MOTION ON STYLE ** //
+    &[data-animated=true] {
+        // border: 3px solid skyblue;
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+        .scroller__inner {
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: 
+            scroll var(--_animation-duration, 40s)
+            var(--_animation-direction, forwards)
+            linear 
+            infinite;
+        }
+    }
+
+    // ** SCROLLER VARIABLE OPTIONS ** //
+    // DEFAULT DIRECTION - RIGHT TO LEFT = FORWARDS
+    &[data-direction=left] {
+        --_animation-direction: forwards;
+    }
+    // REVERSE DIRECTION - LEFT TO RIGHT = REVERSE
+    &[data-direction=right] {
+        --_animation-direction: reverse;
+    }
+
+    // SPEED VARIABLES
+    &[data-speed=slow] {
+        --_animation-duration: 60s;
+    }
+    &[data-speed=fast] {
+        --_animation-duration: 20s;
+    }
+}
+
+
+// SCROLL ANIMATIONS
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
